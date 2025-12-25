@@ -48,12 +48,12 @@ const ServiceCard = ({
     title: string
     description: string
 }) => (
-    <div className="group flex flex-col gap-4 rounded-xl border border-sky-400/30 bg-slate-900/40 p-8 transition-all duration-300 hover:border-sky-400 hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-400/20 h-full">
-        <div className="flex size-14 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400 group-hover:bg-sky-400/20 transition-colors">
+    <div className="group flex h-full flex-col gap-4 rounded-xl border border-sky-400/30 bg-slate-900/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-400/20">
+        <div className="flex size-14 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400 transition-colors group-hover:bg-sky-400/20">
             {icon}
         </div>
         <div className="flex flex-col gap-3 pt-1">
-            <h3 className="text-gray-50 text-xl font-bold">{title}</h3>
+            <h3 className="font-bold text-gray-50 text-xl">{title}</h3>
             <p className="text-slate-500 text-sm leading-relaxed">
                 {description}
             </p>
@@ -62,11 +62,11 @@ const ServiceCard = ({
 )
 
 const CTACard = () => (
-    <div className="group flex flex-col items-center justify-center gap-6 rounded-xl border-2 border-dashed border-slate-700/50 bg-slate-900/20 p-8 transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/30 h-full">
-        <h3 className="text-gray-50 text-xl font-bold text-center">
+    <div className="group flex h-full flex-col items-center justify-center gap-6 rounded-xl border-2 border-slate-700/50 border-dashed bg-slate-900/20 p-8 transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/30">
+        <h3 className="text-center font-bold text-gray-50 text-xl">
             Tem um projeto específico?
         </h3>
-        <button className="bg-sky-600 hover:bg-sky-500 text-gray-50 font-bold py-3 px-8 rounded-full text-sm transition-all duration-300 hover:scale-105 shadow-lg shadow-sky-600/20">
+        <button className="rounded-full bg-sky-600 px-8 py-3 font-bold text-gray-50 text-sm shadow-lg shadow-sky-600/20 transition-all duration-300 hover:scale-105 hover:bg-sky-500">
             Fale Conosco
         </button>
     </div>
@@ -75,13 +75,13 @@ const CTACard = () => (
 export default function ServicesPage() {
     return (
         <div className="min-h-screen bg-slate-950 font-montserrat">
-            <main className="w-full py-16 px-4 sm:px-6 lg:px-8 flex justify-center">
-                <div className="max-w-7xl w-full flex flex-col gap-16">
-                    <header className="flex flex-col gap-4 w-full max-w-[600px]">
-                        <h1 className="text-gray-50 text-4xl md:text-5xl font-black">
+            <main className="flex w-full justify-center px-4 py-16 sm:px-6 lg:px-8">
+                <div className="flex w-full max-w-7xl flex-col gap-16">
+                    <header className="flex w-full max-w-[600px] flex-col gap-4">
+                        <h1 className="font-black text-4xl text-gray-50 md:text-5xl">
                             Nossos Serviços
                         </h1>
-                        <p className="text-slate-500 text-lg leading-relaxed">
+                        <p className="text-lg text-slate-500 leading-relaxed">
                             Desenvolvemos sistemas internos, plataformas
                             digitais e automações que organizam operações,
                             reduzem custos e permitem decisões mais
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                         </p>
                     </header>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {services.map((service) => (
                             <ServiceCard key={service.id} {...service} />
                         ))}

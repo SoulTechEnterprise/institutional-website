@@ -16,7 +16,7 @@ export default function Header() {
     ]
 
     return (
-        <header className="w-screen py-4 px-8 flex items-center m-auto justify-between max-w-7xl">
+        <header className="m-auto flex w-screen max-w-7xl items-center justify-between px-8 py-4">
             <div className="flex items-center gap-3">
                 <Image
                     src="/logo.png"
@@ -25,7 +25,7 @@ export default function Header() {
                     height={40}
                     className="object-contain"
                 />
-                <h1 className="font-montserrat text-white font-bold">
+                <h1 className="font-bold font-montserrat text-white">
                     Soul Tech
                 </h1>
             </div>
@@ -36,8 +36,8 @@ export default function Header() {
                         href={link.href}
                         className={
                             pathname === link.href
-                                ? "text-white font-medium"
-                                : "text-white/75 hover:text-white transition-colors"
+                                ? "font-medium text-white"
+                                : "text-white/75 transition-colors hover:text-white"
                         }
                     >
                         {link.label}

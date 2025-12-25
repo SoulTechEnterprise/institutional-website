@@ -73,12 +73,12 @@ const FeatureCard = ({
     title: string
     description: string
 }) => (
-    <div className="group flex flex-col gap-4 rounded-xl border border-sky-400/30 bg-slate-900/40 p-8 transition-all duration-300 hover:border-sky-400 hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-400/20 h-full">
-        <div className="flex size-14 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400 group-hover:bg-sky-400/20 transition-colors">
+    <div className="group flex h-full flex-col gap-4 rounded-xl border border-sky-400/30 bg-slate-900/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-400/20">
+        <div className="flex size-14 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400 transition-colors group-hover:bg-sky-400/20">
             {icon}
         </div>
         <div className="flex flex-col gap-3 pt-1">
-            <h3 className="text-gray-50 text-xl font-bold">{title}</h3>
+            <h3 className="font-bold text-gray-50 text-xl">{title}</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
                 {description}
             </p>
@@ -89,16 +89,16 @@ const FeatureCard = ({
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-slate-950 font-montserrat">
-            <main className="w-full py-16 px-4 sm:px-6 lg:px-8 flex justify-center">
-                <div className="max-w-7xl w-full flex flex-col gap-20">
-                    <header className="flex flex-col gap-6 max-w-[700px]">
-                        <h1 className="text-gray-50 text-4xl md:text-5xl font-black">
+            <main className="flex w-full justify-center px-4 py-16 sm:px-6 lg:px-8">
+                <div className="flex w-full max-w-7xl flex-col gap-20">
+                    <header className="flex max-w-[700px] flex-col gap-6">
+                        <h1 className="font-black text-4xl text-gray-50 md:text-5xl">
                             Sobre a{" "}
                             <span className="bg-gradient-to-r from-sky-400 to-indigo-600 bg-clip-text text-transparent">
                                 Soul Tech
                             </span>
                         </h1>
-                        <div className="flex flex-col gap-4 text-slate-400 text-base leading-relaxed">
+                        <div className="flex flex-col gap-4 text-base text-slate-400 leading-relaxed">
                             <p>
                                 A Soul Tech é uma startup de tecnologia focada
                                 no desenvolvimento de sistemas internos,
@@ -121,15 +121,15 @@ export default function AboutPage() {
 
                     <section className="flex flex-col gap-8">
                         <header className="flex flex-col gap-3">
-                            <h2 className="text-gray-50 text-3xl md:text-4xl font-black">
+                            <h2 className="font-black text-3xl text-gray-50 md:text-4xl">
                                 Pilares Estratégicos
                             </h2>
-                            <p className="text-slate-400 text-base leading-relaxed">
+                            <p className="text-base text-slate-400 leading-relaxed">
                                 Impulsionados por um compromisso com a inovação
                                 e o design centrado no ser humano.
                             </p>
                         </header>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                             {pillars.map((pillar) => (
                                 <FeatureCard key={pillar.id} {...pillar} />
                             ))}
@@ -138,31 +138,35 @@ export default function AboutPage() {
 
                     <section className="flex flex-col gap-8">
                         <header className="flex flex-col gap-3">
-                            <h2 className="text-gray-50 text-3xl md:text-4xl font-black">
+                            <h2 className="font-black text-3xl text-gray-50 md:text-4xl">
                                 Valores
                             </h2>
-                            <p className="text-slate-400 text-base leading-relaxed">
+                            <p className="text-base text-slate-400 leading-relaxed">
                                 Os princípios que guiam cada uma de nossas
                                 decisões.
                             </p>
                         </header>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {values.map((value) => <FeatureCard key={value.id} {...value} />)}
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            {values.map((value) => (
+                                <FeatureCard key={value.id} {...value} />
+                            ))}
                         </div>
                     </section>
 
                     <section className="flex flex-col gap-8">
                         <header className="flex flex-col gap-3">
-                            <h2 className="text-gray-50 text-3xl md:text-4xl font-black">
+                            <h2 className="font-black text-3xl text-gray-50 md:text-4xl">
                                 Conheça o Time
                             </h2>
-                            <p className="text-slate-400 text-base leading-relaxed">
+                            <p className="text-base text-slate-400 leading-relaxed">
                                 As pessoas por trás das soluções que
                                 desenvolvemos.
                             </p>
                         </header>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {team.map(({ id, ...props }) => <TeamCard key={id} {...props} />)}
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            {team.map(({ id, ...props }) => (
+                                <TeamCard key={id} {...props} />
+                            ))}
                         </div>
                     </section>
                 </div>

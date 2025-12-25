@@ -14,14 +14,14 @@ import CardTech from "./components/cardTech"
 
 export default function Home() {
     return (
-        <main className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 p-4 md:p-8 w-full min-h-screen justify-between max-w-7xl m-auto">
-            <section className="flex flex-col gap-8 justify-center items-start">
-                <div className="flex gap-2 items-center py-2 px-4 border border-solid border-sky-400 rounded-full uppercase text-xs text-sky-400 font-bold">
-                    <div className="w-2 h-2 bg-sky-400 rounded-full" />
+        <main className="m-auto grid min-h-screen w-full max-w-7xl grid-cols-1 items-center justify-between gap-8 p-4 md:p-8 lg:grid-cols-2">
+            <section className="flex flex-col items-start justify-center gap-8">
+                <div className="flex items-center gap-2 rounded-full border border-sky-400 border-solid px-4 py-2 font-bold text-sky-400 text-xs uppercase">
+                    <div className="h-2 w-2 rounded-full bg-sky-400" />
                     Disponível para Novos Projetos
                 </div>
 
-                <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-black font-montserrat">
+                <h2 className="font-black font-montserrat text-3xl text-white md:text-4xl lg:text-5xl">
                     Construindo o <br />{" "}
                     <span className="bg-gradient-to-r from-sky-400 to-indigo-600 bg-clip-text text-transparent">
                         Futuro Digital
@@ -37,13 +37,13 @@ export default function Home() {
                         sustentar o crescimento do seu negócio.
                     </p>
                 </div>
-                <div className="flex gap-4 flex-wrap">
+                <div className="flex flex-wrap gap-4">
                     <CardTech icon={Code} title="React" />
                     <CardTech icon={FileBraces} title="Python" />
                     <CardTech icon={Braces} title="C#" />
                 </div>
                 <Link
-                    className="flex gap-2 text-black rounded bg-sky-400 px-4 py-2 font-bold text-sm items-center"
+                    className="flex items-center gap-2 rounded bg-sky-400 px-4 py-2 font-bold text-black text-sm"
                     href="/contact"
                 >
                     Iniciar um Projeto
@@ -51,17 +51,17 @@ export default function Home() {
                 </Link>
             </section>
 
-            <section className="flex flex-col gap-8 border border-solid border-sky-400 rounded-2xl p-8">
+            <section className="flex flex-col gap-8 rounded-2xl border border-sky-400 border-solid p-8">
                 <div className="flex items-start justify-between">
                     <div className="flex flex-col">
-                        <h3 className="text-white font-bold text-xl">
+                        <h3 className="font-bold text-white text-xl">
                             Métricas
                         </h3>
                         <p className="text-white/75">
                             Dados atualizados com frequência
                         </p>
                     </div>
-                    <div className="rounded-full border border-solid border-sky-400 text-sky-400 p-2">
+                    <div className="rounded-full border border-sky-400 border-solid p-2 text-sky-400">
                         <ChartNoAxesColumnIncreasing size={12} />
                     </div>
                 </div>

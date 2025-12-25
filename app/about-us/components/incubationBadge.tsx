@@ -4,21 +4,21 @@ export default function IncubationBadge() {
     return (
         <div className="group w-full rounded-xl border border-sky-400/30 bg-gradient-to-br from-slate-900/60 to-slate-900/40 p-8 transition-all duration-300 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-400/20">
             <div className="flex items-start gap-6">
-                <div className="flex size-16 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400 group-hover:bg-sky-400/20 transition-colors">
+                <div className="flex size-16 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400 transition-colors group-hover:bg-sky-400/20">
                     <Rocket className="size-9" />
                 </div>
                 <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-3 flex-wrap">
-                        <h3 className="text-gray-50 text-xl font-bold">
+                    <div className="flex flex-wrap items-center gap-3">
+                        <h3 className="font-bold text-gray-50 text-xl">
                             Incubação e Ecossistema de Inovação
                         </h3>
-                        <span className="px-3 py-1 rounded-full bg-sky-400/10 text-sky-400 text-xs font-bold uppercase tracking-wide border border-sky-400/30">
+                        <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 font-bold text-sky-400 text-xs uppercase tracking-wide">
                             Tec Unimar
                         </span>
                     </div>
                     <p className="text-slate-400 text-sm leading-relaxed">
                         A Soul Tech é uma startup incubada no{" "}
-                        <span className="text-sky-400 font-semibold">
+                        <span className="font-semibold text-sky-400">
                             Tec Unimar
                         </span>
                         , o ecossistema de inovação da Universidade de Marília
