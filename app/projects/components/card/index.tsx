@@ -13,13 +13,13 @@ export interface CardProps {
 
 export default function Card({ src, alt, title, desc, tag, link }: CardProps) {
     return (
-        <div className="flex flex-col border border-solid border-white/10 rounded">
+        <div className="group flex flex-col border border-solid border-white/10 rounded transition-all duration-300 hover:border-sky-400/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-400/20">
             <div className="relative rounded-tl rounded-tr bg-black aspect-video">
                 <Image
                     src={src}
                     alt={alt}
                     fill
-                    className="rounded-tl rounded-tr"
+                    className="rounded-tl rounded-tr transition-all duration-300 group-hover:scale-105"
                 />
             </div>
 
@@ -29,13 +29,13 @@ export default function Card({ src, alt, title, desc, tag, link }: CardProps) {
             </div>
 
             <div className="flex p-4 gap-2 items-center justify-between">
-                <div className="px-4 py-1.5 border border-solid border-sky-400 rounded-2xl text-sky-400 font-bold text-xs uppercase">
+                <div className="px-4 py-1.5 border border-solid border-sky-400 rounded-2xl text-sky-400 font-bold text-xs uppercase transition-all duration-300 group-hover:bg-sky-400/10">
                     {tag}
                 </div>
 
                 <Link
                     href={link}
-                    className="flex items-center gap-2 text-white text-xs"
+                    className="flex items-center gap-2 text-white text-xs transition-all duration-300 group-hover:text-sky-400 group-hover:gap-3"
                 >
                     Ver mais <MoveRight size={12} />
                 </Link>

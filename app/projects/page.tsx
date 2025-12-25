@@ -2,9 +2,11 @@ import Card from "./components/card"
 
 export default function Projects() {
     return (
-        <main className="flex flex-col gap-8 max-w-7xl m-auto p-8">
+        <main className="flex flex-col gap-8 max-w-7xl m-auto p-4 md:p-8">
             <section className="flex flex-col gap-2">
-                <h1 className="text-white text-4xl font-bold">Projetos</h1>
+                <h1 className="text-white text-3xl md:text-4xl font-bold">
+                    Projetos
+                </h1>
                 <p className="text-white/75 text-sm max-w-2xl">
                     Conheça algumas das soluções que estamos desenvolvendo e
                     evoluindo. Aplicamos mentalidade de produto tanto em
@@ -12,7 +14,7 @@ export default function Projects() {
                 </p>
             </section>
 
-            <section className="grid grid-cols-3 gap-4">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <Card
                     src=""
                     alt="Example"

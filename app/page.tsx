@@ -14,14 +14,14 @@ import CardTech from "./components/cardTech"
 
 export default function Home() {
     return (
-        <main className="grid grid-cols-2 items-center gap-8 p-8 w-screen h-screen justify-between max-w-7xl m-auto">
+        <main className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 p-4 md:p-8 w-full min-h-screen justify-between max-w-7xl m-auto">
             <section className="flex flex-col gap-8 justify-center items-start">
                 <div className="flex gap-2 items-center py-2 px-4 border border-solid border-sky-400 rounded-full uppercase text-xs text-sky-400 font-bold">
                     <div className="w-2 h-2 bg-sky-400 rounded-full" />
                     Disponível para Novos Projetos
                 </div>
 
-                <h2 className="text-white text-5xl font-black font-montserrat">
+                <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-black font-montserrat">
                     Construindo o <br />{" "}
                     <span className="bg-gradient-to-r from-sky-400 to-indigo-600 bg-clip-text text-transparent">
                         Futuro Digital
@@ -37,7 +37,7 @@ export default function Home() {
                         sustentar o crescimento do seu negócio.
                     </p>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-wrap">
                     <CardTech icon={Code} title="React" />
                     <CardTech icon={FileBraces} title="Python" />
                     <CardTech icon={Braces} title="C#" />
