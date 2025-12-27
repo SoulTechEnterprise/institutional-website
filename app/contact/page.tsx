@@ -33,12 +33,12 @@ export default function Contact() {
     }
 
     return (
-        <main className="m-auto flex max-w-7xl flex-col gap-8 p-4 md:p-8">
+        <main className="m-auto flex min-h-screen max-w-7xl flex-col justify-center gap-8 p-4 md:p-8 lg:-mt-20">
             <section className="flex flex-col gap-4">
-                <h2 className="font-bold text-3xl text-white md:text-4xl">
+                <h2 className="font-black text-2xl text-white md:text-4xl">
                     {t.contact.left_side.title}
                 </h2>
-                <p className="text-sm text-white/75">
+                <p className="text-sm text-white/75 lg:text-base">
                     {t.contact.left_side.desc}
                 </p>
             </section>
@@ -46,7 +46,7 @@ export default function Contact() {
             <section className="grid grid-cols-1 gap-8 lg:grid-cols-2">
                 <form
                     onSubmit={handleSubmit(handleForm)}
-                    className="flex flex-col justify-center gap-8"
+                    className="flex flex-col justify-center gap-4 lg:gap-8"
                 >
                     <div className="flex flex-col gap-2">
                         <label
@@ -111,8 +111,8 @@ export default function Contact() {
                     </button>
                 </form>
 
-                <div className="flex flex-col gap-8 rounded border border-sky-400/50 border-solid p-8">
-                    <h2 className="font-bold text-2xl text-white">
+                <div className="flex flex-col gap-4 rounded border border-sky-400/50 border-solid p-4 lg:p-8 lg:p-8">
+                    <h2 className="font-bold text-base text-white lg:text-xl">
                         {t.contact.right_side.title}
                     </h2>
 

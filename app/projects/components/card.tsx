@@ -23,7 +23,7 @@ export default function Card({ src, alt, title, desc, tag, link }: CardProps) {
                     src={src}
                     alt={alt}
                     fill
-                    className="rounded-tl rounded-tr transition-all duration-300 group-hover:scale-105"
+                    className="rounded-tl rounded-tr"
                 />
             </div>
 
