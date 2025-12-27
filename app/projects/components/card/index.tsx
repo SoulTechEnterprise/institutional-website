@@ -1,6 +1,9 @@
+"use client"
+
 import { MoveRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useLanguage } from "@/app/language-context"
 
 export interface CardProps {
     src: string
@@ -12,8 +15,9 @@ export interface CardProps {
 }
 
 export default function Card({ src, alt, title, desc, tag, link }: CardProps) {
+    const { t } = useLanguage()
     return (
-        <div className="group flex flex-col rounded border border-white/10 border-solid transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:shadow-lg hover:shadow-sky-400/20">
+        <div className="group grid grid-rows-[auto_1fr_auto] rounded border border-white/10 border-solid transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:shadow-lg hover:shadow-sky-400/20">
             <div className="relative aspect-video rounded-tl rounded-tr bg-black">
                 <Image
                     src={src}
@@ -37,7 +41,7 @@ export default function Card({ src, alt, title, desc, tag, link }: CardProps) {
                     href={link}
                     className="flex items-center gap-2 text-white text-xs transition-all duration-300 group-hover:gap-3 group-hover:text-sky-400"
                 >
-                    Ver mais <MoveRight size={12} />
+                    {t.project.button} <MoveRight size={12} />
                 </Link>
             </div>
         </div>
