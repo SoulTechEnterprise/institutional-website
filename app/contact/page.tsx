@@ -1,6 +1,7 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
+import axios from "axios"
 import { House, Mail, Phone, SendHorizonal } from "lucide-react"
 import { redirect } from "next/navigation"
 import { Controller, useForm } from "react-hook-form"
@@ -28,6 +29,7 @@ export default function Contact() {
     })
 
     const handleForm = async (data: FormScheme) => {
+        await axios.post("https://formspree.io/f/xaqwrboo", data)
         reset()
         redirect("https://wa.me/14997559851")
     }
