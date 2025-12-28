@@ -32,6 +32,9 @@ importers:
       react-imask:
         specifier: ^7.6.1
         version: 7.6.1(react@19.2.3)
+      sharp:
+        specifier: ^0.34.5
+        version: 0.34.5
       zod:
         specifier: ^4.2.1
         version: 4.2.1
@@ -822,8 +825,7 @@ snapshots:
       '@standard-schema/utils': 0.3.0
       react-hook-form: 7.69.0(react@19.2.3)
 
-  '@img/colour@1.0.0':
-    optional: true
+  '@img/colour@1.0.0': {}
 
   '@img/sharp-darwin-arm64@0.34.5':
     optionalDependencies:
@@ -1302,8 +1304,7 @@ snapshots:
 
   scheduler@0.27.0: {}
 
-  semver@7.7.3:
-    optional: true
+  semver@7.7.3: {}
 
   sharp@0.34.5:
     dependencies:
@@ -1335,7 +1336,6 @@ snapshots:
       '@img/sharp-win32-arm64': 0.34.5
       '@img/sharp-win32-ia32': 0.34.5
       '@img/sharp-win32-x64': 0.34.5
-    optional: true
 
   source-map-js@1.2.1: {}
 
