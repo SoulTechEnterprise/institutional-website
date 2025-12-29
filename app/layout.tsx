@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     title: "Soul Tech | Desenvolvimento de Sistemas, Plataformas Digitais e Automações",
     description:
         "Sistemas internos, plataformas digitais e automações sob medida. Tecnologia com alma, foco no negócio e crescimento sustentável...",
+    icons: {
+        icon: "/logo.webp",
+    },
 }
 
 export default function RootLayout({

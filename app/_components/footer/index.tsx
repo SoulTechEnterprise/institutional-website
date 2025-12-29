@@ -16,6 +16,8 @@ export default function Footer() {
                             className="underline underline-offset-4"
                             href={el.href}
                             key={el.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             {el.title}
                         </Link>

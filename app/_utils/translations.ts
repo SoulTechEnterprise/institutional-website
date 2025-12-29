@@ -27,9 +27,12 @@ export const translations = {
             text: [
                 {
                     title: "Política de Privacidade",
-                    href: "/privacy-policy",
+                    href: "https://legal.soultech.agency/pt-br/privacy-policy.html",
                 },
-                { title: "Termos de Uso", href: "/terms-of-use" },
+                {
+                    title: "Termos de Uso",
+                    href: "https://legal.soultech.agency/pt-br/terms-of-use.html",
+                },
             ],
         },
         home: {
@@ -275,9 +278,12 @@ export const translations = {
             text: [
                 {
                     title: "Privacy Policy",
-                    href: "/privacy-policy",
+                    href: "https://legal.soultech.agency/en-en/privacy-policy.html",
                 },
-                { title: "Terms of Use", href: "/terms-of-use" },
+                {
+                    title: "Terms of Use",
+                    href: "https://legal.soultech.agency/en-en/terms-of-use.html",
+                },
             ],
         },
         home: {
