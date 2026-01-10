@@ -23,7 +23,7 @@ export const translations = {
             },
         ],
         footer: {
-            title: "@ 2026 Todos os direitos reservador para Soul Tech",
+            title: "@ 2026 Todos os direitos reservados para Soul Tech",
             text: [
                 {
                     title: "Política de Privacidade",
