@@ -186,6 +186,13 @@ export const translations = {
                     src: "/projects/app-hire-up.webp",
                 },
                 {
+                    title: "VPS Trader Ninja",
+                    desc: "Plataforma SaaS de orquestração de infraestrutura para Trading Algorítmico. Utiliza Docker e KVM para provisionar automaticamente ambientes Windows isolados e otimizados, com pré-instalação de NinjaTrader e ferramentas de sincronização de tempo, garantindo execução de baixa latência.",
+                    tag: "Página de Vendas",
+                    url: "https://vpstrader.ninja/",
+                    src: "/projects/vps-trader-ninja.webp",
+                },
+                {
                     title: "Vavence",
                     desc: "Página de vendas para imóvel exclusivo em SP, com integração Web-to-Trello. Leads capturados geram cards automáticos e personalizados no CRM da imobiliária, otimizando o fluxo de vendas.",
                     tag: "Página de Vendas",
@@ -536,6 +543,13 @@ export const translations = {
                     tag: "App",
                     url: "https://github.com/JvbsB7/HireUp-FrontEnd",
                     src: "/projects/app-hire-up.webp",
+                },
+                {
+                    title: "VPS Trader Ninja",
+                    desc: "SaaS infrastructure orchestration platform for Algorithmic Trading. Uses Docker and KVM to automatically provision isolated, optimized Windows environments with pre-installed NinjaTrader and time synchronization tools, ensuring low-latency execution.",
+                    tag: "Sales Page",
+                    url: "https://vpstrader.ninja/",
+                    src: "/projects/vps-trader-ninja.webp",
                 },
                 {
                     title: "Vavence",
