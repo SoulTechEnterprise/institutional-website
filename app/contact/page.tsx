@@ -2,7 +2,14 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios from "axios"
-import { House, Mail, Phone, SendHorizonal } from "lucide-react"
+import {
+    House,
+    Instagram,
+    Mail,
+    Phone,
+    SendHorizonal,
+    Youtube,
+} from "lucide-react"
 import { redirect } from "next/navigation"
 import { Controller, useForm } from "react-hook-form"
 import { IMaskInput } from "react-imask"
@@ -136,6 +143,41 @@ export default function Contact() {
                             title={t.contact.right_side.field.address}
                             content="R. Pedro Alpino, 401 – Jardim Araxa | Marília – SP"
                         />
+                    </div>
+
+                    <div className="mt-4 border-white/10 border-t pt-4">
+                        <h3 className="mb-3 text-center font-semibold text-sm text-white/75">
+                            Redes Sociais
+                        </h3>
+                        <div className="flex items-center justify-center gap-4">
+                            <a
+                                href="https://wa.me/5514997559851"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/75 transition-all duration-300 hover:scale-110 hover:border-sky-400/50 hover:text-sky-400"
+                                aria-label="WhatsApp"
+                            >
+                                <Phone size={18} />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/soultech_en/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/75 transition-all duration-300 hover:scale-110 hover:border-sky-400/50 hover:text-sky-400"
+                                aria-label="Instagram"
+                            >
+                                <Instagram size={18} />
+                            </a>
+                            <a
+                                href="https://www.youtube.com/@SoulTech-En"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/75 transition-all duration-300 hover:scale-110 hover:border-sky-400/50 hover:text-sky-400"
+                                aria-label="YouTube"
+                            >
+                                <Youtube size={18} />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -3,3 +3,28 @@
 body {
     font-family: var(--font-montserrat), Helvetica, sans-serif;
 }
+
+/* Scrollbar customizado - fino e minimalista */
+* {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(56, 189, 248, 0.3) transparent; /* thumb e track */
+}
+
+*::-webkit-scrollbar {
+    width: 6px; /* Largura do scrollbar vertical */
+    height: 6px; /* Altura do scrollbar horizontal */
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent; /* Fundo do track */
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.3); /* Cor do thumb (sky-400 com opacidade) */
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 189, 248, 0.5); /* Cor mais visível no hover */
+}
+

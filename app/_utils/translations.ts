@@ -27,11 +27,11 @@ export const translations = {
             text: [
                 {
                     title: "Política de Privacidade",
-                    href: "https://legal.soultech.agency/pt-br/privacy-policy.html",
+                    href: "/privacy-policy",
                 },
                 {
                     title: "Termos de Uso",
-                    href: "https://legal.soultech.agency/pt-br/terms-of-use.html",
+                    href: "/terms-of-service",
                 },
             ],
         },
@@ -249,6 +249,107 @@ export const translations = {
                 },
             },
         },
+        privacyPolicy: {
+            title: "Política Privacidade",
+            lastUpdate: "Efetiva a partir de 29 December 2025 13:30",
+            contact:
+                "Se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.",
+            sections: [
+                {
+                    title: "Política de Privacidade",
+                    content: [
+                        "A sua privacidade é importante para nós. É política do SoulTech respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site SoulTech, e outros sites que possuímos e operamos.",
+                        "Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.",
+                        "Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.",
+                        "Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.",
+                        "O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.",
+                        "Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.",
+                        "O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.",
+                    ],
+                },
+                {
+                    title: "Cookies e Publicidade",
+                    content: [
+                        "O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.",
+                        "Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.",
+                        "Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental usados ​​por este site foram projetados para garantir que você forneça os anúncios mais relevantes sempre que possível, rastreando anonimamente seus interesses e apresentando coisas semelhantes que possam ser do seu interesse.",
+                        "Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados simplesmente nos permitem ver se nossos clientes acessaram o site através de um dos sites de nossos parceiros, para que possamos creditá-los adequadamente e, quando aplicável, permitir que nossos parceiros afiliados ofereçam qualquer promoção que pode fornecê-lo para fazer uma compra.",
+                    ],
+                },
+                {
+                    title: "Compromisso do Usuário",
+                    content: [
+                        "O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o SoulTech oferece no site e com caráter enunciativo, mas não limitativo:",
+                        "A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;",
+                        "B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;",
+                        "C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do SoulTech, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.",
+                    ],
+                },
+            ],
+        },
+        termsOfUse: {
+            title: "Termos de Uso",
+            lastUpdate: "Efetiva a partir de 29 December 2025 13:30",
+            contact:
+                "Ao usar este site, você concorda em ficar vinculado à versão atual desses termos de serviço.",
+            sections: [
+                {
+                    title: "1. Termos",
+                    content: [
+                        "Ao acessar ao site SoulTech, concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis ​​e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.",
+                    ],
+                },
+                {
+                    title: "2. Uso de Licença",
+                    content: [
+                        "É concedida permissão para baixar temporariamente uma cópia dos materiais (informações ou software) no site SoulTech, apenas para visualização transitória pessoal e não comercial. Esta é a concessão de uma licença, não uma transferência de título e, sob esta licença, você não pode:",
+                        "• modificar ou copiar os materiais;",
+                        "• usar os materiais para qualquer finalidade comercial ou para exibição pública (comercial ou não comercial);",
+                        "• tentar descompilar ou fazer engenharia reversa de qualquer software contido no site SoulTech;",
+                        "• remover quaisquer direitos autorais ou outras notações de propriedade dos materiais; ou",
+                        "• transferir os materiais para outra pessoa ou 'espelhe' os materiais em qualquer outro servidor.",
+                        "Esta licença será automaticamente rescindida se você violar alguma dessas restrições e poderá ser rescindida por SoulTech a qualquer momento. Ao encerrar a visualização desses materiais ou após o término desta licença, você deve apagar todos os materiais baixados em sua posse, seja em formato eletrónico ou impresso.",
+                    ],
+                },
+                {
+                    title: "3. Isenção de responsabilidade",
+                    content: [
+                        "Os materiais no site da SoulTech são fornecidos 'como estão'. SoulTech não oferece garantias, expressas ou implícitas, e, por este meio, isenta e nega todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização, adequação a um fim específico ou não violação de propriedade intelectual ou outra violação de direitos.",
+                        "Além disso, o SoulTech não garante ou faz qualquer representação relativa à precisão, aos resultados prováveis ​​ou à confiabilidade do uso dos materiais em seu site ou de outra forma relacionado a esses materiais ou em sites vinculados a este site.",
+                    ],
+                },
+                {
+                    title: "4. Limitações",
+                    content: [
+                        "Em nenhum caso o SoulTech ou seus fornecedores serão responsáveis ​​por quaisquer danos (incluindo, sem limitação, danos por perda de dados ou lucro ou devido a interrupção dos negócios) decorrentes do uso ou da incapacidade de usar os materiais em SoulTech, mesmo que SoulTech ou um representante autorizado da SoulTech tenha sido notificado oralmente ou por escrito da possibilidade de tais danos. Como algumas jurisdições não permitem limitações em garantias implícitas, ou limitações de responsabilidade por danos conseqüentes ou incidentais, essas limitações podem não se aplicar a você.",
+                    ],
+                },
+                {
+                    title: "5. Precisão dos materiais",
+                    content: [
+                        "Os materiais exibidos no site da SoulTech podem incluir erros técnicos, tipográficos ou fotográficos. SoulTech não garante que qualquer material em seu site seja preciso, completo ou atual. SoulTech pode fazer alterações nos materiais contidos em seu site a qualquer momento, sem aviso prévio. No entanto, SoulTech não se compromete a atualizar os materiais.",
+                    ],
+                },
+                {
+                    title: "6. Links",
+                    content: [
+                        "O SoulTech não analisou todos os sites vinculados ao seu site e não é responsável pelo conteúdo de nenhum site vinculado. A inclusão de qualquer link não implica endosso por SoulTech do site. O uso de qualquer site vinculado é por conta e risco do usuário.",
+                    ],
+                },
+                {
+                    title: "7. Modificações",
+                    content: [
+                        "O SoulTech pode revisar estes termos de serviço do site a qualquer momento, sem aviso prévio. Ao usar este site, você concorda em ficar vinculado à versão atual desses termos de serviço.",
+                    ],
+                },
+                {
+                    title: "8. Lei aplicável",
+                    content: [
+                        "Estes termos e condições são regidos e interpretados de acordo com as leis do SoulTech e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.",
+                    ],
+                },
+            ],
+        },
     },
     en: {
         header: [
@@ -278,11 +379,11 @@ export const translations = {
             text: [
                 {
                     title: "Privacy Policy",
-                    href: "https://legal.soultech.agency/en-en/privacy-policy.html",
+                    href: "/privacy-policy",
                 },
                 {
                     title: "Terms of Use",
-                    href: "https://legal.soultech.agency/en-en/terms-of-use.html",
+                    href: "/terms-of-service",
                 },
             ],
         },
@@ -499,6 +600,107 @@ export const translations = {
                     address: "Address",
                 },
             },
+        },
+        privacyPolicy: {
+            title: "Privacy Policy",
+            lastUpdate: "Effective as of 29 December 2025 13:36",
+            contact:
+                "Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site.",
+            sections: [
+                {
+                    title: "Privacy Policy",
+                    content: [
+                        "Your privacy is important to us. It is SoulTech's policy to respect your privacy regarding any information we may collect from you across our website, SoulTech, and other sites we own and operate.",
+                        "We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we're collecting it and how it will be used.",
+                        "We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we'll protect within commercially acceptable means to prevent loss and theft, as well as unauthorised access, disclosure, copying, use or modification.",
+                        "We don't share any personally identifying information publicly or with third-parties, except when required to by law.",
+                        "Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.",
+                        "You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.",
+                        "Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.",
+                    ],
+                },
+                {
+                    title: "Cookie Policy",
+                    content: [
+                        "This is the Cookie Policy for SoulTech, accessible from URL https://soultech.agency/.",
+                        "As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or break certain elements of the sites functionality.",
+                        "We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use.",
+                        "You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of this site. Therefore it is recommended that you do not disable cookies.",
+                    ],
+                },
+                {
+                    title: "User's Responsibilities",
+                    content: [
+                        "The user undertakes the responsibility to make appropriate use of the contents and information offered on the site with enunciative, but not imitative, behaviour:",
+                        "A) Not to engage in activities that are illegal or contrary to good faith and public order;",
+                        "B) Not to spread propaganda or content of a racist, xenophobic or gambling nature, any type of illegal pornography, terrorist claims or against human rights;",
+                        "C) Do not cause damage to physical systems (hardware) and unattainable (software) of SoulTech, its suppliers or third parties, to introduce or disseminate computer viruses or any other hardware or software systems that are capable of causing damage previously mentioned.",
+                    ],
+                },
+            ],
+        },
+        termsOfUse: {
+            title: "Terms of Service",
+            lastUpdate: "Effective as of 29 December 2025 13:36",
+            contact:
+                "By using this website you are agreeing to be bound by the then current version of these terms of service.",
+            sections: [
+                {
+                    title: "1. Terms",
+                    content: [
+                        "By accessing the website at SoulTech you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.",
+                    ],
+                },
+                {
+                    title: "2. Use License",
+                    content: [
+                        "Permission is granted to temporarily download one copy of the materials (information or software) on SoulTech's website for personal, non-commercial transitory viewing only. This is the grant of a licence, not a transfer of title, and under this licence you may not:",
+                        "• modify or copy the materials;",
+                        "• use the materials for any commercial purpose, or for any public display (commercial or non-commercial);",
+                        "• attempt to decompile or reverse engineer any software contained on SoulTech website;",
+                        "• remove any copyright or other proprietary notations from the materials; or",
+                        "• transfer the materials to another person or 'mirror' the materials on any other server.",
+                        "This licence shall automatically terminate if you violate any of these restrictions and may be terminated by SoulTech at any time. Upon terminating your viewing of these materials or upon the termination of this licence, you must destroy any downloaded materials in your possession whether in electronic or printed format.",
+                    ],
+                },
+                {
+                    title: "3. Disclaimer",
+                    content: [
+                        "The materials on SoulTech's website are provided on an 'as is' basis. SoulTech makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.",
+                        "Further, SoulTech does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.",
+                    ],
+                },
+                {
+                    title: "4. Limitations",
+                    content: [
+                        "In no event shall SoulTech or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on SoulTech's website, even if SoulTech or a SoulTech authorised representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.",
+                    ],
+                },
+                {
+                    title: "5. Accuracy of Materials",
+                    content: [
+                        "The materials appearing on SoulTech's website could include technical, typographical, or photographic errors. SoulTech does not warrant that any of the materials on its website are accurate, complete or current. SoulTech may make changes to the materials contained on its website at any time without notice. However SoulTech does not make any commitment to update the materials.",
+                    ],
+                },
+                {
+                    title: "6. Links",
+                    content: [
+                        "SoulTech has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by SoulTech of the site. Use of any such linked website is at the user's own risk.",
+                    ],
+                },
+                {
+                    title: "7. Modifications",
+                    content: [
+                        "SoulTech may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.",
+                    ],
+                },
+                {
+                    title: "8. Governing Law",
+                    content: [
+                        "These terms and conditions are governed by and construed in accordance with the laws of SoulTech and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.",
+                    ],
+                },
+            ],
         },
     },
 }
