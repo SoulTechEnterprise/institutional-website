@@ -13,13 +13,20 @@ import type { NextConfig } from "next"
  * dinâmica e tiraria todas as páginas do pré-render estático — troca ruim para
  * um site institucional sem conteúdo gerado por usuário.
  */
+const isDev = process.env.NODE_ENV === "development"
+
 const contentSecurityPolicy = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline'",
+    // Em desenvolvimento o React usa eval() para reconstruir pilhas de chamada
+    // e outros recursos de depuração; sem a permissão, o console acusa erro a
+    // cada carga. Em produção o React nunca chama eval(), então a build
+    // publicada continua sem 'unsafe-eval'.
+    `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob:",
     "font-src 'self' data:",
-    "connect-src 'self' https://formspree.io",
+    // O HMR do Next abre um websocket na própria origem durante o dev.
+    `connect-src 'self' https://formspree.io${isDev ? " ws: wss:" : ""}`,
     "form-action 'self' https://formspree.io",
     "frame-ancestors 'none'",
     "base-uri 'self'",

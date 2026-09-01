@@ -31,8 +31,8 @@ export const translations = {
         home: {
             hero: {
                 status: "Disponível para novos projetos",
-                titleLead: "Software sob medida para",
-                titleAccent: "operações que precisam escalar",
+                titleLead: "Software sob medida",
+                titleAccent: "para escalar",
                 text: [
                     "Transformamos processos manuais e fragmentados em sistemas digitais escaláveis, seguros e orientados à decisão.",
                     "Atuamos do diagnóstico à evolução contínua, aplicando mentalidade de produto em cada entrega.",
@@ -50,7 +50,7 @@ export const translations = {
                         },
                         {
                             key: "Stack",
-                            value: "React · Next.js · Python · C# · .NET",
+                            value: "Next.js · Node.js · Python · Rust · AWS",
                         },
                     ],
                 },
@@ -166,6 +166,11 @@ export const translations = {
                     { key: "CNPJ", value: "{cnpj}" },
                     { key: "Endereço", value: "{address}" },
                 ],
+            },
+            stack: {
+                eyebrow: "Tecnologia",
+                title: "Com o que trabalhamos",
+                desc: "Escolhemos a ferramenta pelo problema, não pelo hype. Esta é a base que sustenta os sistemas que entregamos.",
             },
             pillar: {
                 eyebrow: "Direção",
@@ -512,8 +517,8 @@ export const translations = {
         home: {
             hero: {
                 status: "Available for new projects",
-                titleLead: "Custom software for",
-                titleAccent: "operations that need to scale",
+                titleLead: "Custom software",
+                titleAccent: "built to scale",
                 text: [
                     "We turn manual, fragmented processes into scalable, secure and decision-oriented digital systems.",
                     "We work from diagnosis to continuous evolution, applying a product mindset to every delivery.",
@@ -531,7 +536,7 @@ export const translations = {
                         },
                         {
                             key: "Stack",
-                            value: "React · Next.js · Python · C# · .NET",
+                            value: "Next.js · Node.js · Python · Rust · AWS",
                         },
                     ],
                 },
@@ -647,6 +652,11 @@ export const translations = {
                     { key: "Tax ID", value: "CNPJ {cnpj}" },
                     { key: "Address", value: "{address}" },
                 ],
+            },
+            stack: {
+                eyebrow: "Technology",
+                title: "What we build with",
+                desc: "We pick the tool for the problem, not for the hype. This is the foundation behind the systems we deliver.",
             },
             pillar: {
                 eyebrow: "Direction",

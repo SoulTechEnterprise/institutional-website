@@ -13,6 +13,7 @@ import { PageHero } from "../_components/ui/page-hero"
 import { FeatureCard, IconBadge, Panel } from "../_components/ui/panel"
 import { Reveal } from "../_components/ui/reveal"
 import { Section, SectionHeading } from "../_components/ui/section"
+import { TechIcon, techStack } from "../_components/ui/tech-icons"
 import { addressLine, site } from "../_utils/site"
 import { useLanguage } from "../language-context"
 import TeamCard from "./components/teamCard"
@@ -91,6 +92,35 @@ export default function AboutPage() {
                         </Panel>
                     </Reveal>
                 </div>
+            </Section>
+
+            {/* Stack */}
+            <Section size="compact">
+                <Reveal>
+                    <SectionHeading
+                        eyebrow={about.stack.eyebrow}
+                        title={about.stack.title}
+                        description={about.stack.desc}
+                    />
+                </Reveal>
+                <ul className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3 lg:grid-cols-5">
+                    {techStack.map((tech, index) => (
+                        <Reveal
+                            as="li"
+                            key={tech.name}
+                            delay={(index % 5) * 60}
+                            className="group flex flex-col items-center justify-center gap-3 bg-ink px-4 py-7 transition-colors duration-500 hover:bg-white/[0.03]"
+                        >
+                            <TechIcon
+                                path={tech.path}
+                                className="h-7 w-7 text-fg-faint transition-colors duration-500 group-hover:text-accent"
+                            />
+                            <span className="text-center font-medium text-fg-muted text-sm transition-colors duration-500 group-hover:text-fg">
+                                {tech.label}
+                            </span>
+                        </Reveal>
+                    ))}
+                </ul>
             </Section>
 
             {/* Pilares */}

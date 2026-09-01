@@ -17,6 +17,11 @@
 /.next/
 /out/
 
+# Arquivos de instrução para agentes de IA, gerados pelo Next a cada `next dev`.
+# Para parar de gerá-los, defina `agentRules: false` no next.config.ts.
+AGENTS.md
+CLAUDE.md
+
 # production
 /build
 
