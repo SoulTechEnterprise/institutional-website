@@ -3,11 +3,15 @@
 import {
     createContext,
     type ReactNode,
+    useCallback,
     useContext,
     useEffect,
+    useMemo,
     useState,
 } from "react"
 import { type Language, translations } from "./_utils/translations"
+
+const STORAGE_KEY = "app-lang"
 
 type LanguageContextType = {
     lang: Language
@@ -19,34 +23,46 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
     undefined
 )
 
+/**
+ * O idioma inicial é "pt" — o mesmo declarado em <html lang="pt-BR"> e o do
+ * mercado principal. Assim o HTML servido já sai coerente com o atributo de
+ * idioma e os buscadores indexam a versão correta; a troca para "en" acontece
+ * na hidratação, apenas para quem escolheu ou navega em inglês.
+ */
 export function LanguageProvider({ children }: { children: ReactNode }) {
-    const [lang, setLang] = useState<Language>("en")
+    const [lang, setLang] = useState<Language>("pt")
 
     useEffect(() => {
-        const savedLang = localStorage.getItem("app-lang") as Language
+        const saved = localStorage.getItem(STORAGE_KEY)
 
-        if (savedLang) {
-            setLang(savedLang)
+        if (saved === "pt" || saved === "en") {
+            setLang(saved)
             return
         }
 
-        const browserLang = navigator.language.toLowerCase()
-        console.log("Idioma detectado:", browserLang)
-
-        if (browserLang.startsWith("pt")) {
-            setLang("pt")
+        if (!navigator.language.toLowerCase().startsWith("pt")) {
+            setLang("en")
         }
     }, [])
 
-    const changeLang = (newLang: Language) => {
+    // Mantém o atributo lang do documento em sincronia com o conteúdo exibido,
+    // o que importa para leitores de tela e para a hifenização do navegador.
+    useEffect(() => {
+        document.documentElement.lang = lang === "pt" ? "pt-BR" : "en"
+    }, [lang])
+
+    const changeLang = useCallback((newLang: Language) => {
         setLang(newLang)
-        localStorage.setItem("app-lang", newLang)
-    }
+        localStorage.setItem(STORAGE_KEY, newLang)
+    }, [])
+
+    const value = useMemo(
+        () => ({ lang, setLang: changeLang, t: translations[lang] }),
+        [lang, changeLang]
+    )
 
     return (
-        <LanguageContext.Provider
-            value={{ lang, setLang: changeLang, t: translations[lang] }}
-        >
+        <LanguageContext.Provider value={value}>
             {children}
         </LanguageContext.Provider>
     )

@@ -1,122 +1,176 @@
 export const translations = {
     pt: {
-        header: [
-            {
-                title: "Inicial",
-                href: "/",
-            },
-            {
-                title: "Serviços",
-                href: "/provision-of-services",
-            },
-            {
-                title: "Sobre Nós",
-                href: "/about-us",
-            },
-            {
-                title: "Projetos",
-                href: "/projects",
-            },
-            {
-                title: "Contato",
-                href: "/contact",
-            },
-        ],
+        nav: {
+            links: [
+                { title: "Início", href: "/" },
+                { title: "Serviços", href: "/provision-of-services" },
+                { title: "Sobre", href: "/about-us" },
+                { title: "Projetos", href: "/projects" },
+                { title: "Contato", href: "/contact" },
+            ],
+            cta: "Iniciar projeto",
+            back: "Voltar para o início",
+            openMenu: "Abrir menu",
+            closeMenu: "Fechar menu",
+            language: "Idioma",
+        },
         footer: {
-            title: "@ 2026 Todos os direitos reservados para Soul Tech",
-            text: [
-                {
-                    title: "Política de Privacidade",
-                    href: "/privacy-policy",
-                },
-                {
-                    title: "Termos de Uso",
-                    href: "/terms-of-service",
-                },
+            tagline:
+                "Sistemas internos, plataformas digitais e automações sob medida para operações que precisam crescer sem perder o controle.",
+            cnpjLabel: "CNPJ",
+            navLabel: "Navegação",
+            contactLabel: "Contato",
+            legalLabel: "Legal",
+            socialLabel: "Redes sociais",
+            rights: "© 2026 Soul Tech. Todos os direitos reservados.",
+            links: [
+                { title: "Política de Privacidade", href: "/privacy-policy" },
+                { title: "Termos de Uso", href: "/terms-of-service" },
             ],
         },
         home: {
-            left_side: {
-                header: "Disponível para Novos Projetos",
-                title: "Construindo o Futuro Digital",
+            hero: {
+                status: "Disponível para novos projetos",
+                titleLead: "Software sob medida para",
+                titleAccent: "operações que precisam escalar",
                 text: [
-                    "Transformamos processos complexos em sistemas digitais escaláveis, seguros e orientados à decisão.",
-                    "A Soul Tech desenvolve soluções sob medida para sustentar o crescimento do seu negócio.",
+                    "Transformamos processos manuais e fragmentados em sistemas digitais escaláveis, seguros e orientados à decisão.",
+                    "Atuamos do diagnóstico à evolução contínua, aplicando mentalidade de produto em cada entrega.",
                 ],
-                button: "Iniciar um projeto",
+                primary: "Iniciar um projeto",
+                secondary: "Ver serviços",
+                spec: {
+                    label: "Perfil",
+                    rows: [
+                        { key: "Sede", value: "Marília – SP" },
+                        { key: "CNPJ", value: "{cnpj}" },
+                        {
+                            key: "Frentes",
+                            value: "Sistemas internos, plataformas e automações",
+                        },
+                        {
+                            key: "Stack",
+                            value: "React · Next.js · Python · C# · .NET",
+                        },
+                    ],
+                },
             },
-            right_side: {
-                title: "Métricas",
-                subTitle: "Dados atualizados com frequência",
-                cards: [
+            differentials: {
+                eyebrow: "Por que a Soul Tech",
+                items: [
                     {
-                        title: "Projetos em Desenvolvimento",
-                        desc: "Soluções próprias e sob medida em evolução contínua",
+                        title: "Mentalidade de produto",
+                        desc: "Entendemos o processo antes de escrever a primeira linha. A solução nasce do problema de negócio, não da tecnologia da moda.",
                     },
                     {
-                        title: "Foco em Escala e Performance",
-                        desc: "Arquiteturas pensadas para crescer com o negócio",
+                        title: "Arquitetura para crescer",
+                        desc: "Sistemas desenhados para absorver aumento de volume, novos módulos e integrações sem exigir reescrita.",
                     },
                     {
-                        title: "Relacionamento de Longo Prazo",
-                        desc: "Parcerias técnicas contínuas com clientes",
+                        title: "Parceria de longo prazo",
+                        desc: "Sustentação e evolução contínua depois da entrega. O projeto não termina no deploy.",
                     },
                 ],
+            },
+            services: {
+                eyebrow: "Serviços",
+                title: "Do diagnóstico à evolução contínua",
+                desc: "Cobrimos o ciclo completo: entender a operação, desenhar a arquitetura, construir e manter em evolução.",
+                link: "Ver todos os serviços",
+            },
+            process: {
+                eyebrow: "Como trabalhamos",
+                title: "Um processo previsível, do primeiro contato à sustentação",
+                desc: "Cada etapa tem entregável definido. Você sabe onde o projeto está e o que vem em seguida.",
+                steps: [
+                    {
+                        title: "Diagnóstico",
+                        desc: "Mapeamos o processo atual, os gargalos e o que precisa de fato ser resolvido.",
+                    },
+                    {
+                        title: "Arquitetura",
+                        desc: "Definimos escopo, stack e a estrutura que sustenta o crescimento esperado.",
+                    },
+                    {
+                        title: "Construção",
+                        desc: "Desenvolvimento em ciclos curtos, com entregas revisáveis e ajuste de rota.",
+                    },
+                    {
+                        title: "Evolução",
+                        desc: "Sustentação, acompanhamento e novas frentes conforme a operação amadurece.",
+                    },
+                ],
+            },
+            cases: {
+                eyebrow: "Projetos",
+                title: "Soluções em produção",
+                desc: "Plataformas e sistemas que desenvolvemos para clientes e para o portfólio próprio da Soul Tech.",
+                link: "Ver todos os projetos",
+            },
+            cta: {
+                title: "Tem um processo que ainda roda no improviso?",
+                desc: "Conte o cenário. Respondemos com um diagnóstico inicial e os caminhos possíveis, sem compromisso.",
+                primary: "Falar com a Soul Tech",
+                secondary: "Chamar no WhatsApp",
             },
         },
-        profision_of_services: {
+        services: {
+            eyebrow: "O que fazemos",
             title: "Nossos Serviços",
             desc: "Desenvolvemos sistemas internos, plataformas digitais e automações que organizam operações, reduzem custos e permitem decisões mais inteligentes. Atuamos do diagnóstico à evolução contínua.",
             cards: [
                 {
                     title: "Sistemas Internos Sob Medida",
                     desc: "Desenvolvimento de sistemas personalizados para organizar processos, centralizar informações e aumentar a eficiência operacional.",
-                    type: true,
                 },
                 {
                     title: "Plataformas Digitais",
                     desc: "Criação de plataformas web e mobile escaláveis, seguras e preparadas para evolução contínua do produto.",
-                    type: true,
                 },
                 {
                     title: "Automação de Processos",
                     desc: "Automatizamos tarefas manuais e fluxos repetitivos, integrando sistemas e reduzindo gargalos operacionais.",
-                    type: true,
                 },
                 {
                     title: "UX/UI Design",
                     desc: "Interfaces funcionais e intuitivas, focadas na experiência do usuário e na eficiência do uso diário.",
-                    type: true,
                 },
                 {
                     title: "Consultoria Técnica e Arquitetura",
                     desc: "Diagnóstico de processos, definição de arquitetura de sistemas e apoio estratégico para decisões tecnológicas.",
-                    type: true,
                 },
                 {
-                    title: "Tem um projeto específico?",
-                    desc: "Fale Conosco",
-                    type: false,
+                    title: "Sustentação e Evolução",
+                    desc: "Manutenção, monitoramento e desenvolvimento contínuo de sistemas já em produção, próprios ou de terceiros.",
                 },
             ],
+            cta: {
+                title: "Tem um projeto específico?",
+                desc: "Descreva o cenário e montamos o caminho técnico junto com você.",
+                button: "Fale conosco",
+            },
         },
-        aboutUs: {
+        about: {
+            eyebrow: "Quem somos",
             title: "Sobre a Soul Tech",
             text: [
-                "A Soul Tech é uma startup de tecnologia focada no desenvolvimento de sistemas internos, plataformas digitais e automações sob medida.",
+                "A Soul Tech é uma empresa de tecnologia focada no desenvolvimento de sistemas internos, plataformas digitais e automações sob medida.",
                 "Atuamos na transformação de operações manuais e fragmentadas em soluções digitais escaláveis, seguras e orientadas à decisão.",
                 "Trabalhamos a partir do entendimento profundo do negócio, aplicando mentalidade de produto em cada solução desenvolvida.",
             ],
-            enterprise: {
-                title: "Incubada no Tec Unimar",
-                text: [
-                    "A Soul Tech é uma startup incubada no Tec Unimar, o ecossistema de inovação da Universidade de Marília (UNIMAR). A incubação proporciona acesso a ambiente de inovação, apoio institucional, orientação estratégica e conexão com o ecossistema empreendedor, fortalecendo a estrutura da empresa e acelerando a evolução contínua das soluções desenvolvidas.",
-                    "A incubação proporciona acesso a ambiente de inovação, apoio institucional, orientação estratégica e conexão com o ecossistema empreendedor, fortalecendo a estrutura da empresa e acelerando a evolução contínua das soluções desenvolvidas.",
+            company: {
+                badge: "Empresa registrada",
+                title: "Dados da empresa",
+                desc: "Somos uma empresa formalizada, com contrato, nota fiscal e responsabilidade sobre o que entregamos.",
+                rows: [
+                    { key: "CNPJ", value: "{cnpj}" },
+                    { key: "Endereço", value: "{address}" },
                 ],
             },
             pillar: {
+                eyebrow: "Direção",
                 title: "Pilares Estratégicos",
-                desc: "Impulsionados por um compromisso com a inovação e o design centrado no ser humano.",
+                desc: "O que orienta as decisões da empresa no médio e longo prazo.",
                 card: [
                     {
                         title: "Missão",
@@ -131,6 +185,7 @@ export const translations = {
                 ],
             },
             core: {
+                eyebrow: "Princípios",
                 title: "Valores",
                 desc: "Os princípios que guiam cada uma de nossas decisões.",
                 card: [
@@ -152,6 +207,7 @@ export const translations = {
                 ],
             },
             team: {
+                eyebrow: "Time",
                 title: "Conheça o Time",
                 desc: "As pessoas por trás das soluções que desenvolvemos.",
                 card: [
@@ -172,88 +228,154 @@ export const translations = {
                     },
                 ],
             },
+            cta: {
+                title: "Vamos conversar sobre a sua operação?",
+                desc: "O primeiro passo é entender o processo. O resto a gente desenha junto.",
+                button: "Falar com a Soul Tech",
+            },
         },
-        project: {
+        projects: {
+            eyebrow: "Portfólio",
             title: "Projetos",
-            desc: "Conheça algumas das soluções que estamos desenvolvendo e evoluindo. Aplicamos mentalidade de produto tanto em projetos próprios quanto em soluções para clientes.",
-            button: "Ver mais",
+            desc: "Soluções que desenvolvemos e continuamos evoluindo. Aplicamos mentalidade de produto tanto em projetos próprios quanto em soluções para clientes.",
+            button: "Ver projeto",
+            featuredTitle: "Cases",
+            featuredDesc:
+                "Produtos e plataformas em produção, desenvolvidos para clientes e para o portfólio próprio da Soul Tech.",
+            labTitle: "Laboratório",
+            labDesc:
+                "Projetos de estudo e experimentação técnica. Mantemos por transparência: é onde testamos abordagens antes de levá-las para um projeto de cliente.",
             card: [
                 {
-                    title: "HireUp",
-                    desc: "O front-end do HireUp — solução projetada para a Soul Tech conectar talentos e oportunidades de forma elegante e funcional. Desenvolvido com foco em performance, acessibilidade e UX intuitiva, este repositório mostra como transformo requisitos de negócio em interfaces responsivas e robustas. ",
-                    tag: "App",
-                    url: "https://github.com/JvbsB7/HireUp-FrontEnd",
-                    src: "/projects/app-hire-up.webp",
+                    title: "Fast Marketplace",
+                    desc: "Plataforma que elimina o recadastro manual de imóveis no Marketplace do Facebook: o corretor cola o link do anúncio e o sistema extrai os dados e preenche a publicação. Produto próprio da Soul Tech, em operação.",
+                    tag: "Produto próprio",
+                    url: "https://fast-marketplace-frontend.soultech.agency/sign-in",
+                    src: "/projects/fast-marketplace.webp",
+                    featured: true,
                 },
                 {
                     title: "VPS Trader Ninja",
-                    desc: "Plataforma SaaS de orquestração de infraestrutura para Trading Algorítmico. Utiliza Docker e KVM para provisionar automaticamente ambientes Windows isolados e otimizados, com pré-instalação de NinjaTrader e ferramentas de sincronização de tempo, garantindo execução de baixa latência.",
-                    tag: "Página de Vendas",
+                    desc: "Plataforma SaaS de orquestração de infraestrutura para trading algorítmico. Usa Docker e KVM para provisionar automaticamente ambientes Windows isolados e otimizados, com pré-instalação do NinjaTrader e sincronização de tempo, garantindo execução de baixa latência.",
+                    tag: "Plataforma SaaS",
                     url: "https://vpstrader.ninja/",
                     src: "/projects/vps-trader-ninja.webp",
+                    featured: true,
+                },
+                {
+                    title: "HireUp",
+                    desc: "Produto próprio da Soul Tech para conectar talentos e oportunidades. O front-end foi construído com foco em performance, acessibilidade e um fluxo de uso direto, transformando requisitos de negócio em interfaces responsivas e robustas.",
+                    tag: "Produto próprio",
+                    url: "https://github.com/JvbsB7/HireUp-FrontEnd",
+                    src: "/projects/app-hire-up.webp",
+                    featured: true,
+                },
+                {
+                    title: "Auto QR Code",
+                    desc: "Produto desenvolvido em parceria com um cliente para gerenciar o destino de QR Codes já impressos. Permite trocar o endereço para onde o código aponta sem gerar um novo — útil em cardápios de restaurante, placas de imóveis e materiais que mudam a cada campanha.",
+                    tag: "Produto em parceria",
+                    url: "https://github.com/SoulTechEnterprise/auto-qrcode-frontend",
+                    featured: true,
                 },
                 {
                     title: "Vavence",
-                    desc: "Página de vendas para imóvel exclusivo em SP, com integração Web-to-Trello. Leads capturados geram cards automáticos e personalizados no CRM da imobiliária, otimizando o fluxo de vendas.",
-                    tag: "Página de Vendas",
+                    desc: "Página de vendas para imóvel exclusivo em São Paulo, com integração Web-to-Trello. Cada lead capturado gera um card automático e personalizado no CRM da imobiliária, encurtando o fluxo de vendas.",
+                    tag: "Página de vendas",
                     url: "https://lp-centro-agroindustrial.vercel.app/",
                     src: "/projects/lp-vavence.webp",
+                    featured: true,
+                },
+                {
+                    title: "Marividros",
+                    desc: "Site para uma empresa de portas de vidro e esquadrias, apresentando a linha de produtos e serviços com foco em gerar contato direto com a equipe comercial.",
+                    tag: "Site institucional",
+                    url: "https://github.com/SoulTechEnterprise/marividros-landing-page",
+                    featured: true,
                 },
                 {
                     title: "Innova",
-                    desc: "Desenvolvimento de site institucional para a financeira Innova. O projeto foca no fortalecimento da marca e autoridade digital, apresentando a história, valores e soluções da empresa através de um design moderno e corporativo.",
-                    tag: "Site Institucional",
+                    desc: "Site institucional para a financeira Innova. O projeto foca no fortalecimento da marca e na autoridade digital, apresentando história, valores e soluções da empresa em um design corporativo e atual.",
+                    tag: "Site institucional",
                     url: "https://innova-website.vercel.app/",
                     src: "/projects/institucional-innova.webp",
+                    featured: true,
                 },
                 {
-                    title: "Coffe Delivery",
-                    desc: "Plataforma de delivery de café desenvolvida com foco em UX/UI. Funcionalidades incluem seleção dinâmica de itens, carrinho de compras inteligente e formulário completo de pagamento e entrega.",
-                    tag: "Web Aplicação",
+                    title: "Brasil do Hexa",
+                    desc: "Página de vendas para uma linha de camisas comemorativas da seleção brasileira durante a Copa do Mundo, construída para converter tráfego de campanha em pedidos dentro de uma janela curta de sazonalidade.",
+                    tag: "Página de vendas",
+                    url: "https://github.com/SoulTechEnterprise/brasildohexa-landing-page-v1",
+                    featured: true,
+                },
+                {
+                    title: "Coffee Delivery",
+                    desc: "Plataforma de delivery de café com foco em UX/UI: seleção dinâmica de itens, carrinho de compras inteligente e fluxo completo de pagamento e entrega.",
+                    tag: "Aplicação web",
                     url: "https://ignite-react-modulo-02.vercel.app/",
                     src: "/projects/app-coffe-delivery.webp",
-                },
-                {
-                    title: "ToDo List",
-                    desc: "Interface intuitiva para organização de tarefas diárias. O projeto foca na manipulação eficiente de estado, permitindo ao usuário gerenciar todo o ciclo de vida de uma atividade, desde o cadastro até a finalização.",
-                    tag: "Web Aplicação",
-                    url: "https://ignite-react-modulo-01.vercel.app/",
-                    src: "/projects/app-todo-list.webp",
+                    featured: false,
                 },
                 {
                     title: "Gerenciador de Prompt para IA",
-                    desc: "Uma aplicação web que centraliza e gerencia prompts de IA — cadastre, edite e busque rapidamente seus prompts para turbinar sua produtividade. Construído durante o evento NLW Pocket da Rocketseat, demonstra minha capacidade de aprender rápido, aplicar novas APIs e entregar valor real em curto prazo.",
-                    tag: "Web Aplicação",
-                    url: "https://prompt-manager-ignite-react.vercel.app/",
+                    desc: "Aplicação web que centraliza e organiza prompts de IA, com cadastro, edição e busca rápida. Desenvolvida durante o NLW Pocket da Rocketseat.",
+                    tag: "Aplicação web",
+                    url: "https://github.com/JvbsB7/nlw-pocket-rocketseat",
                     src: "/projects/app-prompt-manager.webp",
+                    featured: false,
+                },
+                {
+                    title: "ToDo List",
+                    desc: "Interface para organização de tarefas diárias, focada em manipulação eficiente de estado: o usuário gerencia todo o ciclo de vida de uma atividade, do cadastro à finalização.",
+                    tag: "Aplicação web",
+                    url: "https://ignite-react-modulo-01.vercel.app/",
+                    src: "/projects/app-todo-list.webp",
+                    featured: false,
                 },
                 {
                     title: "Lista de Compra",
-                    desc: "Aplicativo de lista de compras onde o usuário pode adicionar produtos com quantidade, marcar itens como comprados ou pendentes e excluir itens da lista. Interface simples e intuitiva, focada em organização e praticidade no dia a dia.",
+                    desc: "Aplicativo de lista de compras: adicionar produtos com quantidade, marcar itens como comprados ou pendentes e excluir itens da lista. Interface simples, focada em praticidade no dia a dia.",
                     tag: "App",
                     url: "https://github.com/JvbsB7/App-RocketSeat---2025",
                     src: "/projects/app-shopping-list.webp",
+                    featured: false,
                 },
             ],
         },
         contact: {
-            left_side: {
-                title: "Vamos construir o futuro juntos",
-                desc: "Tem um projeto em mente ou precisa de uma solução digital sob medida? Fale com a Soul Tech",
-                field: {
-                    name: "Nome",
-                    email: "E-mail",
-                    phone: "Telefone",
-                    button: "Enviar",
-                },
+            eyebrow: "Contato",
+            title: "Vamos construir o futuro juntos",
+            desc: "Tem um projeto em mente ou precisa de uma solução digital sob medida? Descreva o cenário e retornamos com os próximos passos.",
+            form: {
+                title: "Envie sua mensagem",
+                name: "Nome",
+                namePlaceholder: "Como podemos te chamar",
+                email: "E-mail",
+                emailPlaceholder: "voce@empresa.com.br",
+                phone: "Telefone",
+                message: "Sobre o projeto",
+                messagePlaceholder:
+                    "Conte brevemente o processo que precisa resolver, o prazo e o que já existe hoje.",
+                consent:
+                    "Autorizo o contato da Soul Tech e o tratamento dos meus dados conforme a",
+                button: "Enviar mensagem",
+                sending: "Enviando…",
+                success:
+                    "Mensagem enviada. Retornamos em breve — estamos te levando para o WhatsApp.",
+                error: "Não foi possível enviar agora. Tente novamente ou fale direto pelo WhatsApp.",
+                required: "Campo obrigatório",
+                invalidEmail: "Informe um e-mail válido",
+                invalidPhone: "Informe um telefone com DDD",
+                shortMessage: "Descreva o projeto em pelo menos 20 caracteres",
+                consentRequired: "É necessário aceitar para prosseguir",
             },
-            right_side: {
-                title: "Contato Direto",
-                field: {
-                    email: "E-mail",
-                    phone: "Telefone",
-                    address: "Endereço",
-                },
+            direct: {
+                title: "Contato direto",
+                email: "E-mail",
+                phone: "Telefone",
+                address: "Endereço",
+                social: "Redes sociais",
+                hours: "Atendimento",
+                hoursValue: "Segunda a sexta, 9h às 18h (BRT)",
             },
         },
         privacyPolicy: {
@@ -359,139 +481,194 @@ export const translations = {
         },
     },
     en: {
-        header: [
-            {
-                title: "Home",
-                href: "/",
-            },
-            {
-                title: "Services",
-                href: "/provision-of-services",
-            },
-            {
-                title: "About Us",
-                href: "/about-us",
-            },
-            {
-                title: "Projects",
-                href: "/projects",
-            },
-            {
-                title: "Contact",
-                href: "/contact",
-            },
-        ],
+        nav: {
+            links: [
+                { title: "Home", href: "/" },
+                { title: "Services", href: "/provision-of-services" },
+                { title: "About", href: "/about-us" },
+                { title: "Projects", href: "/projects" },
+                { title: "Contact", href: "/contact" },
+            ],
+            cta: "Start a project",
+            back: "Back to home",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
+            language: "Language",
+        },
         footer: {
-            title: "@ 2026 All rights reserved to Soul Tech",
-            text: [
-                {
-                    title: "Privacy Policy",
-                    href: "/privacy-policy",
-                },
-                {
-                    title: "Terms of Use",
-                    href: "/terms-of-service",
-                },
+            tagline:
+                "Custom internal systems, digital platforms and automation for operations that need to grow without losing control.",
+            cnpjLabel: "CNPJ",
+            navLabel: "Navigation",
+            contactLabel: "Contact",
+            legalLabel: "Legal",
+            socialLabel: "Social",
+            rights: "© 2026 Soul Tech. All rights reserved.",
+            links: [
+                { title: "Privacy Policy", href: "/privacy-policy" },
+                { title: "Terms of Use", href: "/terms-of-service" },
             ],
         },
         home: {
-            left_side: {
-                header: "Available for New Projects",
-                title: "Building the Digital Future",
+            hero: {
+                status: "Available for new projects",
+                titleLead: "Custom software for",
+                titleAccent: "operations that need to scale",
                 text: [
-                    "We transform complex processes into scalable, secure, and decision-oriented digital systems.",
-                    "Soul Tech develops custom solutions to support your business growth.",
+                    "We turn manual, fragmented processes into scalable, secure and decision-oriented digital systems.",
+                    "We work from diagnosis to continuous evolution, applying a product mindset to every delivery.",
                 ],
-                button: "Start a project",
+                primary: "Start a project",
+                secondary: "See services",
+                spec: {
+                    label: "Profile",
+                    rows: [
+                        { key: "Based in", value: "Marília – SP, Brazil" },
+                        { key: "Tax ID", value: "CNPJ {cnpj}" },
+                        {
+                            key: "Focus",
+                            value: "Internal systems, platforms and automation",
+                        },
+                        {
+                            key: "Stack",
+                            value: "React · Next.js · Python · C# · .NET",
+                        },
+                    ],
+                },
             },
-            right_side: {
-                title: "Metrics",
-                subTitle: "Frequently updated data",
-                cards: [
+            differentials: {
+                eyebrow: "Why Soul Tech",
+                items: [
                     {
-                        title: "Projects in Development",
-                        desc: "Proprietary and custom solutions in continuous evolution",
+                        title: "Product mindset",
+                        desc: "We understand the process before writing the first line. The solution comes from the business problem, not from the trending framework.",
                     },
                     {
-                        title: "Focus on Scale and Performance",
-                        desc: "Architectures designed to grow with the business",
+                        title: "Architecture built to grow",
+                        desc: "Systems designed to absorb higher volume, new modules and integrations without requiring a rewrite.",
                     },
                     {
-                        title: "Long-term Relationship",
-                        desc: "Continuous technical partnerships with clients",
+                        title: "Long-term partnership",
+                        desc: "Support and continuous evolution after delivery. The project does not end at deploy.",
                     },
                 ],
+            },
+            services: {
+                eyebrow: "Services",
+                title: "From diagnosis to continuous evolution",
+                desc: "We cover the full cycle: understanding the operation, designing the architecture, building it and keeping it evolving.",
+                link: "See all services",
+            },
+            process: {
+                eyebrow: "How we work",
+                title: "A predictable process, from first contact to support",
+                desc: "Every stage has a defined deliverable. You always know where the project stands and what comes next.",
+                steps: [
+                    {
+                        title: "Diagnosis",
+                        desc: "We map the current process, the bottlenecks and what actually needs to be solved.",
+                    },
+                    {
+                        title: "Architecture",
+                        desc: "We define scope, stack and the structure that supports the expected growth.",
+                    },
+                    {
+                        title: "Build",
+                        desc: "Development in short cycles, with reviewable deliveries and room to adjust course.",
+                    },
+                    {
+                        title: "Evolution",
+                        desc: "Support, monitoring and new fronts as the operation matures.",
+                    },
+                ],
+            },
+            cases: {
+                eyebrow: "Projects",
+                title: "Solutions in production",
+                desc: "Platforms and systems we built for clients and for Soul Tech's own portfolio.",
+                link: "See all projects",
+            },
+            cta: {
+                title: "Still running a critical process on improvisation?",
+                desc: "Tell us the scenario. We reply with an initial diagnosis and the possible paths, no strings attached.",
+                primary: "Talk to Soul Tech",
+                secondary: "Message on WhatsApp",
             },
         },
-        profision_of_services: {
+        services: {
+            eyebrow: "What we do",
             title: "Our Services",
-            desc: "We develop internal systems, digital platforms, and automations that organize operations, reduce costs, and enable smarter decisions. We act from diagnosis to continuous evolution.",
+            desc: "We develop internal systems, digital platforms and automations that organize operations, reduce costs and enable smarter decisions. We work from diagnosis to continuous evolution.",
             cards: [
                 {
                     title: "Custom Internal Systems",
-                    desc: "Development of personalized systems to organize processes, centralize information, and increase operational efficiency.",
-                    type: true,
+                    desc: "Development of tailored systems to organize processes, centralize information and increase operational efficiency.",
                 },
                 {
                     title: "Digital Platforms",
-                    desc: "Creation of scalable, secure web and mobile platforms prepared for continuous product evolution.",
-                    type: true,
+                    desc: "Creation of scalable and secure web and mobile platforms, prepared for the continuous evolution of the product.",
                 },
                 {
                     title: "Process Automation",
                     desc: "We automate manual tasks and repetitive flows, integrating systems and reducing operational bottlenecks.",
-                    type: true,
                 },
                 {
                     title: "UX/UI Design",
-                    desc: "Functional and intuitive interfaces, focused on user experience and daily usage efficiency.",
-                    type: true,
+                    desc: "Functional and intuitive interfaces, focused on user experience and day-to-day efficiency.",
                 },
                 {
                     title: "Technical Consulting and Architecture",
-                    desc: "Process diagnosis, system architecture definition, and strategic support for technological decisions.",
-                    type: true,
+                    desc: "Process diagnosis, system architecture definition and strategic support for technology decisions.",
                 },
                 {
-                    title: "Have a specific project?",
-                    desc: "Get in touch",
-                    type: false,
+                    title: "Support and Evolution",
+                    desc: "Maintenance, monitoring and continuous development of systems already in production, ours or third-party.",
                 },
             ],
+            cta: {
+                title: "Have a specific project in mind?",
+                desc: "Describe the scenario and we will design the technical path together with you.",
+                button: "Get in touch",
+            },
         },
-        aboutUs: {
+        about: {
+            eyebrow: "Who we are",
             title: "About Soul Tech",
             text: [
-                "Soul Tech is a technology startup focused on developing internal systems, digital platforms, and custom automations.",
-                "We transform manual and fragmented operations into scalable, secure, and decision-oriented digital solutions.",
-                "We work based on a deep understanding of the business, applying a product mindset to every solution developed.",
+                "Soul Tech is a technology company focused on developing internal systems, digital platforms and custom automations.",
+                "We transform manual and fragmented operations into scalable, secure and decision-oriented digital solutions.",
+                "We start from a deep understanding of the business, applying a product mindset to every solution we develop.",
             ],
-            enterprise: {
-                title: "Incubated at Tec Unimar",
-                text: [
-                    "Soul Tech is a startup incubated at Tec Unimar, the innovation ecosystem of the University of Marília (UNIMAR). Incubation provides access to an innovation environment, institutional support, strategic guidance, and connection with the entrepreneurial ecosystem, strengthening the company's structure and accelerating the continuous evolution of developed solutions.",
-                    "Incubation provides access to an innovation environment, institutional support, strategic guidance, and connection with the entrepreneurial ecosystem, strengthening the company's structure and accelerating the continuous evolution of developed solutions.",
+            company: {
+                badge: "Registered company",
+                title: "Company details",
+                desc: "We are a formally registered company, with contracts, invoicing and accountability for what we deliver.",
+                rows: [
+                    { key: "Tax ID", value: "CNPJ {cnpj}" },
+                    { key: "Address", value: "{address}" },
                 ],
             },
             pillar: {
+                eyebrow: "Direction",
                 title: "Strategic Pillars",
-                desc: "Driven by a commitment to innovation and human-centered design.",
+                desc: "What guides the company's decisions in the medium and long term.",
                 card: [
                     {
                         title: "Mission",
                         description:
-                            "To develop digital solutions that organize processes, reduce operational complexity, and sustain business growth.",
+                            "To develop digital solutions that organize processes, reduce operational complexity and sustain business growth.",
                     },
                     {
                         title: "Vision",
                         description:
-                            "To be a reference in the development of custom systems and scalable digital products, building long-term partnerships based on results.",
+                            "To be a reference in custom system development and scalable digital products, building long-term partnerships based on results.",
                     },
                 ],
             },
             core: {
+                eyebrow: "Principles",
                 title: "Values",
-                desc: "The principles that guide every one of our decisions.",
+                desc: "The principles that guide every decision we make.",
                 card: [
                     {
                         title: "Innovation with Purpose",
@@ -501,18 +678,19 @@ export const translations = {
                     {
                         title: "Transparency and Trust",
                         description:
-                            "Clear communication, well-defined processes, and close relationships.",
+                            "Clear communication, well-defined processes and a close relationship.",
                     },
                     {
                         title: "Focus on User and Business",
                         description:
-                            "Solutions designed for those who use and for those who decide.",
+                            "Solutions designed for those who use them and for those who decide.",
                     },
                 ],
             },
             team: {
+                eyebrow: "Team",
                 title: "Meet the Team",
-                desc: "The people behind the solutions we develop.",
+                desc: "The people behind the solutions we build.",
                 card: [
                     {
                         name: "João Vitor",
@@ -531,88 +709,154 @@ export const translations = {
                     },
                 ],
             },
+            cta: {
+                title: "Shall we talk about your operation?",
+                desc: "The first step is understanding the process. We design the rest together.",
+                button: "Talk to Soul Tech",
+            },
         },
-        project: {
+        projects: {
+            eyebrow: "Portfolio",
             title: "Projects",
-            desc: "Discover some of the solutions we are developing and evolving. We apply a product mindset to both proprietary projects and client solutions.",
-            button: "See more",
+            desc: "Solutions we have built and keep evolving. We apply a product mindset both to our own projects and to client solutions.",
+            button: "View project",
+            featuredTitle: "Cases",
+            featuredDesc:
+                "Products and platforms in production, built for clients and for Soul Tech's own portfolio.",
+            labTitle: "Lab",
+            labDesc:
+                "Study and technical experimentation projects. We keep them here for transparency: this is where we test approaches before taking them into a client project.",
             card: [
                 {
-                    title: "HireUp",
-                    desc: "The front-end of HireUp — a solution designed for Soul Tech to connect talent and opportunities elegantly and functionally. Developed with a focus on performance, accessibility, and intuitive UX, this repository demonstrates how I transform business requirements into responsive and robust interfaces.",
-                    tag: "App",
-                    url: "https://github.com/JvbsB7/HireUp-FrontEnd",
-                    src: "/projects/app-hire-up.webp",
+                    title: "Fast Marketplace",
+                    desc: "A platform that removes the manual re-listing of properties on Facebook Marketplace: the broker pastes the listing link and the system extracts the data and fills in the post. A Soul Tech product, live in production.",
+                    tag: "Own product",
+                    url: "https://fast-marketplace-frontend.soultech.agency/sign-in",
+                    src: "/projects/fast-marketplace.webp",
+                    featured: true,
                 },
                 {
                     title: "VPS Trader Ninja",
-                    desc: "SaaS infrastructure orchestration platform for Algorithmic Trading. Uses Docker and KVM to automatically provision isolated, optimized Windows environments with pre-installed NinjaTrader and time synchronization tools, ensuring low-latency execution.",
-                    tag: "Sales Page",
+                    desc: "Infrastructure orchestration SaaS platform for algorithmic trading. It uses Docker and KVM to automatically provision isolated, optimized Windows environments with NinjaTrader preinstalled and time synchronization, ensuring low-latency execution.",
+                    tag: "SaaS Platform",
                     url: "https://vpstrader.ninja/",
                     src: "/projects/vps-trader-ninja.webp",
+                    featured: true,
+                },
+                {
+                    title: "HireUp",
+                    desc: "Soul Tech's own product connecting talent and opportunities. The front-end was built with a focus on performance, accessibility and a direct user flow, turning business requirements into responsive and robust interfaces.",
+                    tag: "Own product",
+                    url: "https://github.com/JvbsB7/HireUp-FrontEnd",
+                    src: "/projects/app-hire-up.webp",
+                    featured: true,
+                },
+                {
+                    title: "Auto QR Code",
+                    desc: "A product built with a client to manage the destination of QR codes that are already printed. It lets you change where the code points without generating a new one — useful for restaurant menus, property signage and printed material that changes every campaign.",
+                    tag: "Joint product",
+                    url: "https://github.com/SoulTechEnterprise/auto-qrcode-frontend",
+                    featured: true,
                 },
                 {
                     title: "Vavence",
-                    desc: "Sales page for an exclusive property in SP, featuring Web-to-Trello integration. Captured leads generate automatic and personalized cards in the real estate agency's CRM, optimizing the sales flow.",
-                    tag: "Sales Page",
+                    desc: "Sales page for an exclusive property in São Paulo, with Web-to-Trello integration. Every captured lead generates an automatic, personalized card in the agency's CRM, shortening the sales flow.",
+                    tag: "Sales page",
                     url: "https://lp-centro-agroindustrial.vercel.app/",
                     src: "/projects/lp-vavence.webp",
+                    featured: true,
+                },
+                {
+                    title: "Marividros",
+                    desc: "Website for a glass doors and frames company, presenting its product and service line with a focus on generating direct contact with the sales team.",
+                    tag: "Institutional site",
+                    url: "https://github.com/SoulTechEnterprise/marividros-landing-page",
+                    featured: true,
                 },
                 {
                     title: "Innova",
-                    desc: "Development of an institutional website for the financial firm Innova. The project focuses on strengthening the brand and digital authority, presenting the company's history, values, and solutions through a modern and corporate design.",
-                    tag: "Institutional Website",
+                    desc: "Institutional website for the Innova finance company. The project focuses on brand strength and digital authority, presenting the company's history, values and solutions in a current corporate design.",
+                    tag: "Institutional site",
                     url: "https://innova-website.vercel.app/",
                     src: "/projects/institucional-innova.webp",
+                    featured: true,
+                },
+                {
+                    title: "Brasil do Hexa",
+                    desc: "Sales page for a line of Brazil national team commemorative shirts during the World Cup, built to convert campaign traffic into orders within a short seasonal window.",
+                    tag: "Sales page",
+                    url: "https://github.com/SoulTechEnterprise/brasildohexa-landing-page-v1",
+                    featured: true,
                 },
                 {
                     title: "Coffee Delivery",
-                    desc: "Coffee delivery platform developed with a focus on UX/UI. Features include dynamic item selection, smart shopping cart, and a complete payment and delivery form.",
-                    tag: "Web Application",
+                    desc: "Coffee delivery platform focused on UX/UI: dynamic item selection, smart shopping cart and a complete payment and delivery flow.",
+                    tag: "Web app",
                     url: "https://ignite-react-modulo-02.vercel.app/",
                     src: "/projects/app-coffe-delivery.webp",
-                },
-                {
-                    title: "ToDo List",
-                    desc: "Intuitive interface for daily task organization. The project focuses on efficient state manipulation, allowing the user to manage the entire activity lifecycle, from registration to completion.",
-                    tag: "Web Application",
-                    url: "https://ignite-react-modulo-01.vercel.app/",
-                    src: "/projects/app-todo-list.webp",
+                    featured: false,
                 },
                 {
                     title: "AI Prompt Manager",
-                    desc: "A web application that centralizes and manages AI prompts — register, edit, and quickly search your prompts to boost productivity. Built during Rocketseat's NLW Pocket event, it demonstrates my ability to learn quickly, apply new APIs, and deliver real value in the short term.",
-                    tag: "Web Application",
-                    url: "https://prompt-manager-ignite-react.vercel.app/",
+                    desc: "Web application that centralizes and organizes AI prompts, with creation, editing and quick search. Built during Rocketseat's NLW Pocket event.",
+                    tag: "Web app",
+                    url: "https://github.com/JvbsB7/nlw-pocket-rocketseat",
                     src: "/projects/app-prompt-manager.webp",
+                    featured: false,
+                },
+                {
+                    title: "ToDo List",
+                    desc: "Interface for organizing daily tasks, focused on efficient state handling: the user manages the entire life cycle of an activity, from creation to completion.",
+                    tag: "Web app",
+                    url: "https://ignite-react-modulo-01.vercel.app/",
+                    src: "/projects/app-todo-list.webp",
+                    featured: false,
                 },
                 {
                     title: "Shopping List",
-                    desc: "Shopping list app where the user can add products with quantities, mark items as purchased or pending, and delete items from the list. Simple and intuitive interface, focused on organization and daily convenience.",
+                    desc: "Shopping list app: add products with quantity, mark items as bought or pending and remove items from the list. A simple interface focused on everyday practicality.",
                     tag: "App",
                     url: "https://github.com/JvbsB7/App-RocketSeat---2025",
                     src: "/projects/app-shopping-list.webp",
+                    featured: false,
                 },
             ],
         },
         contact: {
-            left_side: {
-                title: "Let's build the future together",
-                desc: "Have a project in mind or need a custom digital solution? Talk to Soul Tech",
-                field: {
-                    name: "Name",
-                    email: "Email",
-                    phone: "Phone",
-                    button: "Send",
-                },
+            eyebrow: "Contact",
+            title: "Let's build the future together",
+            desc: "Have a project in mind or need a custom digital solution? Describe the scenario and we will come back with the next steps.",
+            form: {
+                title: "Send your message",
+                name: "Name",
+                namePlaceholder: "What should we call you",
+                email: "Email",
+                emailPlaceholder: "you@company.com",
+                phone: "Phone",
+                message: "About the project",
+                messagePlaceholder:
+                    "Briefly describe the process you need to solve, the timeline and what already exists today.",
+                consent:
+                    "I authorize Soul Tech to contact me and to process my data according to the",
+                button: "Send message",
+                sending: "Sending…",
+                success:
+                    "Message sent. We will get back to you shortly — taking you to WhatsApp now.",
+                error: "We could not send it right now. Please try again or reach us on WhatsApp.",
+                required: "Required field",
+                invalidEmail: "Enter a valid email",
+                invalidPhone: "Enter a phone number with area code",
+                shortMessage: "Describe the project in at least 20 characters",
+                consentRequired: "You need to accept in order to continue",
             },
-            right_side: {
-                title: "Direct Contact",
-                field: {
-                    email: "Email",
-                    phone: "Phone",
-                    address: "Address",
-                },
+            direct: {
+                title: "Direct contact",
+                email: "Email",
+                phone: "Phone",
+                address: "Address",
+                social: "Social",
+                hours: "Business hours",
+                hoursValue: "Monday to Friday, 9am to 6pm (BRT)",
             },
         },
         privacyPolicy: {
@@ -720,3 +964,4 @@ export const translations = {
 }
 
 export type Language = "pt" | "en"
+export type Translation = (typeof translations)["pt"]

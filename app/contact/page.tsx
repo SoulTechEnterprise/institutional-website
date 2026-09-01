@@ -3,184 +3,365 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios from "axios"
 import {
-    House,
+    Clock,
+    Github,
     Instagram,
     Mail,
+    MapPin,
+    MessageCircle,
     Phone,
     SendHorizonal,
     Youtube,
 } from "lucide-react"
-import { redirect } from "next/navigation"
+import Link from "next/link"
+import { useMemo, useState } from "react"
 import { Controller, useForm } from "react-hook-form"
 import { IMaskInput } from "react-imask"
+import { Button } from "../_components/ui/button"
+import { PageHero } from "../_components/ui/page-hero"
+import { IconBadge, Panel } from "../_components/ui/panel"
+import { Section } from "../_components/ui/section"
+import { cn } from "../_utils/cn"
+import { addressLine, site } from "../_utils/site"
 import { useLanguage } from "../language-context"
-import Card from "./components/card"
-import { type FormScheme, formScheme } from "./form"
+import { buildFormScheme, type FormScheme } from "./form"
+
+const inputClasses =
+    "w-full rounded-lg border border-line bg-white/[0.02] px-4 py-3 text-[0.9375rem] text-fg outline-none transition-colors placeholder:text-fg-faint focus:border-accent/50 focus:bg-white/[0.04] aria-[invalid=true]:border-red-500/60"
+
+/** Rótulo, campo e mensagem de erro com a ligação de acessibilidade correta. */
+function Field({
+    id,
+    label,
+    error,
+    children,
+}: {
+    id: string
+    label: string
+    error?: string
+    children: React.ReactNode
+}) {
+    return (
+        <div className="flex flex-col gap-2">
+            <label htmlFor={id} className="font-medium text-fg text-sm">
+                {label}
+            </label>
+            {children}
+            {error ? (
+                <p id={`${id}-erro`} className="text-red-400 text-xs">
+                    {error}
+                </p>
+            ) : null}
+        </div>
+    )
+}
 
 export default function Contact() {
     const { t } = useLanguage()
+    const { contact } = t
+    const f = contact.form
+
+    const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
+
+    const schema = useMemo(() => buildFormScheme(f), [f])
 
     const {
         control,
         register,
         handleSubmit,
         reset,
-        formState: { isSubmitting },
+        formState: { errors, isSubmitting },
     } = useForm<FormScheme>({
-        resolver: zodResolver(formScheme),
+        resolver: zodResolver(schema),
         defaultValues: {
             name: "",
             email: "",
             phone: "",
+            message: "",
+            consent: false as unknown as true,
         },
     })
 
     const handleForm = async (data: FormScheme) => {
-        await axios.post("https://formspree.io/f/xaqwrboo", data)
-        reset()
-        redirect("https://wa.me/14997559851")
+        try {
+            await axios.post(site.formEndpoint, data)
+            reset()
+            setStatus("success")
+            // Dá tempo de ler a confirmação antes de sair para o WhatsApp.
+            setTimeout(() => {
+                window.open(site.whatsapp, "_blank", "noopener,noreferrer")
+            }, 1200)
+        } catch {
+            setStatus("error")
+        }
     }
 
+    const socials = [
+        {
+            href: site.whatsapp,
+            icon: MessageCircle,
+            label: "WhatsApp",
+        },
+        { href: site.social.instagram, icon: Instagram, label: "Instagram" },
+        { href: site.social.youtube, icon: Youtube, label: "YouTube" },
+        { href: site.social.github, icon: Github, label: "GitHub" },
+    ]
+
+    const directItems = [
+        {
+            icon: Mail,
+            label: contact.direct.email,
+            value: site.email,
+            href: `mailto:${site.email}`,
+        },
+        {
+            icon: Phone,
+            label: contact.direct.phone,
+            value: site.phoneDisplay,
+            href: site.whatsapp,
+        },
+        {
+            icon: MapPin,
+            label: contact.direct.address,
+            value: addressLine,
+        },
+        {
+            icon: Clock,
+            label: contact.direct.hours,
+            value: contact.direct.hoursValue,
+        },
+    ]
+
     return (
-        <main className="m-auto flex min-h-screen max-w-7xl flex-col justify-center gap-8 p-4 md:p-8 lg:-mt-20">
-            <section className="flex flex-col gap-4">
-                <h2 className="font-black text-2xl text-white md:text-4xl">
-                    {t.contact.left_side.title}
-                </h2>
-                <p className="text-sm text-white/75 lg:text-base">
-                    {t.contact.left_side.desc}
-                </p>
-            </section>
+        <>
+            <PageHero
+                eyebrow={contact.eyebrow}
+                title={contact.title}
+                description={contact.desc}
+            />
 
-            <section className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                <form
-                    onSubmit={handleSubmit(handleForm)}
-                    className="flex flex-col justify-center gap-4 lg:gap-8"
-                >
-                    <div className="flex flex-col gap-2">
-                        <label
-                            className="self-start font-bold text-sm text-white"
-                            htmlFor="name"
-                        >
-                            {t.contact.left_side.field.name}
-                        </label>
-                        <input
-                            className="rounded border border-sky-400/50 border-solid px-4 py-2 text-white/75 outline-none placeholder:text-sm placeholder:text-white/50"
-                            id="name"
-                            placeholder="Jonh Doe"
-                            {...register("name")}
-                        />
-                    </div>
+            <Section className="pb-24 md:pb-32">
+                <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+                    <Panel className="p-6 md:p-8">
+                        <h2 className="font-semibold text-fg text-h3">
+                            {f.title}
+                        </h2>
 
-                    <div className="flex flex-col gap-2">
-                        <label
-                            className="self-start font-bold text-sm text-white"
-                            htmlFor="email"
+                        <form
+                            onSubmit={handleSubmit(handleForm)}
+                            noValidate
+                            className="mt-6 flex flex-col gap-5"
                         >
-                            {t.contact.left_side.field.email}
-                        </label>
-                        <input
-                            className="rounded border border-sky-400/50 border-solid px-4 py-2 text-white/75 outline-none placeholder:text-sm placeholder:text-white/50"
-                            id="email"
-                            placeholder="jonhdoe@example.com"
-                            {...register("email")}
-                        />
-                    </div>
+                            <div className="grid gap-5 sm:grid-cols-2">
+                                <Field
+                                    id="name"
+                                    label={f.name}
+                                    error={errors.name?.message}
+                                >
+                                    <input
+                                        id="name"
+                                        className={inputClasses}
+                                        placeholder={f.namePlaceholder}
+                                        aria-invalid={!!errors.name}
+                                        aria-describedby={
+                                            errors.name
+                                                ? "name-erro"
+                                                : undefined
+                                        }
+                                        {...register("name")}
+                                    />
+                                </Field>
 
-                    <div className="flex flex-col gap-2">
-                        <label
-                            className="self-start font-bold text-sm text-white"
-                            htmlFor="phone"
-                        >
-                            {t.contact.left_side.field.phone}
-                        </label>
-                        <Controller
-                            name="phone"
-                            control={control}
-                            render={({ field: { onChange, value } }) => (
-                                <IMaskInput
-                                    mask="(00) 00000-0000"
-                                    value={value}
-                                    unmask={true}
-                                    onAccept={(val) => onChange(val)}
-                                    placeholder="(00) 00000-0000"
-                                    className="rounded border border-sky-400/50 border-solid px-4 py-2 text-white/75 outline-none placeholder:text-sm placeholder:text-white/50"
+                                <Field
+                                    id="email"
+                                    label={f.email}
+                                    error={errors.email?.message}
+                                >
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        className={inputClasses}
+                                        placeholder={f.emailPlaceholder}
+                                        aria-invalid={!!errors.email}
+                                        aria-describedby={
+                                            errors.email
+                                                ? "email-erro"
+                                                : undefined
+                                        }
+                                        {...register("email")}
+                                    />
+                                </Field>
+                            </div>
+
+                            <Field
+                                id="phone"
+                                label={f.phone}
+                                error={errors.phone?.message}
+                            >
+                                <Controller
+                                    name="phone"
+                                    control={control}
+                                    render={({
+                                        field: { onChange, value },
+                                    }) => (
+                                        <IMaskInput
+                                            id="phone"
+                                            mask="(00) 00000-0000"
+                                            value={value}
+                                            unmask
+                                            onAccept={(val) =>
+                                                onChange(String(val))
+                                            }
+                                            placeholder="(00) 00000-0000"
+                                            inputMode="tel"
+                                            className={inputClasses}
+                                            aria-invalid={!!errors.phone}
+                                            aria-describedby={
+                                                errors.phone
+                                                    ? "phone-erro"
+                                                    : undefined
+                                            }
+                                        />
+                                    )}
                                 />
-                            )}
-                        />
-                    </div>
+                            </Field>
 
-                    <button
-                        className="flex cursor-pointer items-center justify-center gap-2 rounded bg-sky-400 px-4 py-2 font-bold text-sm text-white"
-                        type="submit"
-                        disabled={isSubmitting}
-                    >
-                        {t.contact.left_side.field.button}{" "}
-                        <SendHorizonal size={12} />
-                    </button>
-                </form>
-
-                <div className="flex flex-col gap-4 rounded border border-sky-400/50 border-solid p-4 lg:p-8 lg:p-8">
-                    <h2 className="font-bold text-base text-white lg:text-xl">
-                        {t.contact.right_side.title}
-                    </h2>
-
-                    <div className="flex flex-col gap-4">
-                        <Card
-                            icon={Mail}
-                            title={t.contact.right_side.field.email}
-                            content="soultech215@gmail.com"
-                        />
-
-                        <Card
-                            icon={Phone}
-                            title={t.contact.right_side.field.phone}
-                            content="(14) 99755-9851"
-                        />
-
-                        <Card
-                            icon={House}
-                            title={t.contact.right_side.field.address}
-                            content="R. Pedro Alpino, 401 – Jardim Araxa | Marília – SP"
-                        />
-                    </div>
-
-                    <div className="mt-4 border-white/10 border-t pt-4">
-                        <h3 className="mb-3 text-center font-semibold text-sm text-white/75">
-                            Redes Sociais
-                        </h3>
-                        <div className="flex items-center justify-center gap-4">
-                            <a
-                                href="https://wa.me/5514997559851"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/75 transition-all duration-300 hover:scale-110 hover:border-sky-400/50 hover:text-sky-400"
-                                aria-label="WhatsApp"
+                            <Field
+                                id="message"
+                                label={f.message}
+                                error={errors.message?.message}
                             >
-                                <Phone size={18} />
-                            </a>
-                            <a
-                                href="https://www.instagram.com/soultech_en/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/75 transition-all duration-300 hover:scale-110 hover:border-sky-400/50 hover:text-sky-400"
-                                aria-label="Instagram"
+                                <textarea
+                                    id="message"
+                                    rows={5}
+                                    className={cn(inputClasses, "resize-y")}
+                                    placeholder={f.messagePlaceholder}
+                                    aria-invalid={!!errors.message}
+                                    aria-describedby={
+                                        errors.message
+                                            ? "message-erro"
+                                            : undefined
+                                    }
+                                    {...register("message")}
+                                />
+                            </Field>
+
+                            <div className="flex flex-col gap-2">
+                                <label className="flex cursor-pointer items-start gap-3 text-fg-muted text-sm leading-relaxed">
+                                    <input
+                                        type="checkbox"
+                                        className="mt-0.5 h-4 w-4 shrink-0 accent-[#38bdf8]"
+                                        aria-invalid={!!errors.consent}
+                                        {...register("consent")}
+                                    />
+                                    <span>
+                                        {f.consent}{" "}
+                                        <Link
+                                            href="/privacy-policy"
+                                            className="text-accent underline underline-offset-4"
+                                        >
+                                            {t.footer.links[0].title}
+                                        </Link>
+                                        .
+                                    </span>
+                                </label>
+                                {errors.consent ? (
+                                    <p className="text-red-400 text-xs">
+                                        {errors.consent.message}
+                                    </p>
+                                ) : null}
+                            </div>
+
+                            <Button
+                                type="submit"
+                                size="lg"
+                                disabled={isSubmitting}
+                                className="mt-1 w-full sm:w-auto sm:self-start"
                             >
-                                <Instagram size={18} />
-                            </a>
-                            <a
-                                href="https://www.youtube.com/@SoulTech-En"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/75 transition-all duration-300 hover:scale-110 hover:border-sky-400/50 hover:text-sky-400"
-                                aria-label="YouTube"
+                                {isSubmitting ? f.sending : f.button}
+                                <SendHorizonal size={16} aria-hidden />
+                            </Button>
+
+                            {/* Região viva: leitores de tela anunciam o desfecho */}
+                            <output
+                                aria-live="polite"
+                                className={cn(
+                                    "text-sm",
+                                    status === "success" && "text-accent",
+                                    status === "error" && "text-red-400"
+                                )}
                             >
-                                <Youtube size={18} />
-                            </a>
-                        </div>
+                                {status === "success" && f.success}
+                                {status === "error" && f.error}
+                            </output>
+                        </form>
+                    </Panel>
+
+                    <div className="flex flex-col gap-6">
+                        <Panel className="p-6 md:p-8">
+                            <h2 className="font-semibold text-fg text-h3">
+                                {contact.direct.title}
+                            </h2>
+
+                            <ul className="mt-6 flex flex-col gap-5">
+                                {directItems.map((item) => (
+                                    <li
+                                        key={item.label}
+                                        className="group flex items-start gap-4"
+                                    >
+                                        <IconBadge icon={item.icon} />
+                                        <div className="flex flex-col gap-0.5">
+                                            <span className="font-mono text-eyebrow text-fg-faint uppercase">
+                                                {item.label}
+                                            </span>
+                                            {item.href ? (
+                                                <a
+                                                    href={item.href}
+                                                    target={
+                                                        item.href.startsWith(
+                                                            "http"
+                                                        )
+                                                            ? "_blank"
+                                                            : undefined
+                                                    }
+                                                    rel="noopener noreferrer"
+                                                    className="text-[0.9375rem] text-fg transition-colors hover:text-accent"
+                                                >
+                                                    {item.value}
+                                                </a>
+                                            ) : (
+                                                <span className="text-[0.9375rem] text-fg">
+                                                    {item.value}
+                                                </span>
+                                            )}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Panel>
+
+                        <Panel className="p-6 md:p-8">
+                            <h2 className="font-mono text-eyebrow text-fg-faint uppercase">
+                                {contact.direct.social}
+                            </h2>
+                            <div className="mt-4 flex flex-wrap gap-2">
+                                {socials.map(({ href, icon: Icon, label }) => (
+                                    <a
+                                        key={label}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 rounded-lg border border-line px-3.5 py-2 text-fg-muted text-sm transition-colors duration-300 hover:border-accent/40 hover:text-accent"
+                                    >
+                                        <Icon size={15} strokeWidth={1.75} />
+                                        {label}
+                                    </a>
+                                ))}
+                            </div>
+                        </Panel>
                     </div>
                 </div>
-            </section>
-        </main>
+            </Section>
+        </>
     )
 }
